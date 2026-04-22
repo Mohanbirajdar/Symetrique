@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symetrique | Real-World Evidence & AI-Driven Healthcare Analytics</title>
+    <meta name="description"
+        content="Symetrique transforms real-world healthcare data into decision-grade evidence for payers, biopharma, and HTA bodies. AI-powered insights for market access and value-based care." />
+    <meta name="keywords"
+        content="Real World Evidence, RWE, healthcare analytics, market access, HTA, payer analytics, biopharma insights, claims data, EHR analytics, value-based care, HEOR, health economics, Symetrique, Symetrique Analytics, Symetrique Healthcare, Symetrique Platform" />
+    <meta name="author" content="Symetrique" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Symetrique | Real-World Evidence & Healthcare Analytics" />
+    <meta property="og:description"
+        content="Turn real-world healthcare data into decision-grade evidence. AI-powered analytics for payers, biopharma, and market access teams." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.thesymetrique.com" />
+    <meta property="og:image" content="https://www.thesymetrique.com/assets/og-image.png" />
+    <meta property="og:site_name" content="Symetrique" />
+
+    <link rel="me" href="https://www.instagram.com/symetrique_physiciandata?igsh=Y3p3Y3V4NzV5NTE3" />
+    <link rel="me" href="https://www.linkedin.com/company/thesymetrique/posts/?feedView=all" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo-placeholder.png" />
+    <link rel="shortcut icon" type="image/png" href="assets/logo-placeholder.png" />
+    <link rel="apple-touch-icon" href="assets/logo-placeholder.png" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://www.thesymetrique.com/#organization",
+        "name": "Symetrique",
+        "alternateName": ["Symetrique Analytics", "Symetrique Healthcare", "Symetrique Healthcare Analytics", "Symetrique RWE", "Symetrique Platform"],
+        "url": "https://www.thesymetrique.com",
+        "logo": "https://www.thesymetrique.com/assets/logo.png",
+        "description": "Symetrique transforms real-world healthcare data into decision-grade evidence using AI and ML, serving payers, biopharma, and market access teams.",
+        "slogan": "Decision-Grade Evidence. Delivered.",
+        "foundingDate": "2024",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/thesymetrique/posts/?feedView=all",
+            "https://www.instagram.com/symetrique_physiciandata?igsh=Y3p3Y3V4NzV5NTE3"
+        ],
+        "keywords": [
+            "Real World Evidence",
+            "RWE",
+            "Healthcare Analytics",
+            "Market Access",
+            "HTA",
+            "Payer Analytics",
+            "Value-Based Care",
+            "AI Healthcare",
+            "Symetrique",
+            "Symetrique Analytics",
+            "Symetrique Healthcare",
+            "Symetrique RWE",
+            "Symetrique Platform"
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <svg viewBox="0 0 100 100" class="preloader-circle">
+                    <circle cx="50" cy="50" r="45" class="circle-bg"/>
+                    <circle cx="50" cy="50" r="45" class="circle-progress"/>
+                </svg>
+                <div class="preloader-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+            </div>
+            <div class="preloader-text">
+                <span class="preloader-brand">Symetrique</span>
+                <span class="preloader-tagline">Decision-Grade Evidence</span>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <!--<nav class="navbar navbar-expand-lg navbar-dark fixed-top">-->
+    <!--    <div class="container">-->
+    <!--        <div class="d-flex align-items-center">-->
+    <!--            <a class="navbar-brand" href="index.html">-->
+    <!--                <div class="d-flex align-items-center">-->
+    <!--                    <img src="assets/logo-placeholder.png" alt="Symetrique Logo" class="img-fluid navbar-logo">-->
+    <!--                </div>-->
+    <!--            </a>-->
+    <!--        </div>-->
+    <!--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"-->
+    <!--            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
+    <!--            <div class="hamburger-icon">-->
+    <!--                <span></span>-->
+    <!--                <span></span>-->
+    <!--                <span></span>-->
+    <!--            </div>-->
+    <!--        </button>-->
+    <!--        <div class="theme-switch-wrapper">-->
+    <!--            <label class="theme-switch" for="checkbox">-->
+    <!--                <input type="checkbox" id="checkbox" />-->
+    <!--                <div class="slider round">-->
+    <!--                    <i class="fas fa-sun"></i>-->
+    <!--                    <i class="fas fa-moon"></i>-->
+    <!--                </div>-->
+    <!--            </label>-->
+    <!--        </div>-->
+    <!--        <div class="collapse navbar-collapse justify-content-end mt-3 mt-lg-0" id="navbarNav">-->
+    <!--            <div class="nav-menu-container">-->
+    <!--                <ul class="nav-menu d-flex flex-column flex-lg-row bg-secondary rounded-pill px-2 py-1">-->
+    <!--                    <li class="nav-item">-->
+    <!--                        <a class="nav-link active rounded-pill px-4 fs-6 fw-light" href="index.html">Home</a>-->
+    <!--                    </li>-->
+    <!--                    <li class="nav-item">-->
+    <!--                        <a class="nav-link rounded-pill px-4 fs-6 fw-light" href="Capabilities.html">Explore Symetrique</a>-->
+    <!--                    </li>-->
+    <!--                    <li class="nav-item">-->
+    <!--                        <a class="nav-link rounded-pill px-4 fs-6 fw-light" href="about.html">About</a>-->
+    <!--                    </li>-->
+    <!--                    <li class="nav-item">-->
+    <!--                        <a class="nav-link rounded-pill px-4 fs-6 fw-light" href="#">Blogs</a>-->
+    <!--                    </li>-->
+    <!--                    <li class="nav-item">-->
+    <!--                        <a class="nav-link cta-nav rounded-pill px-4 fs-6 fw-medium" href="about.html#contact">Contact</a>-->
+    <!--                    </li> -->
+    <!--                </ul>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</nav-->
+    
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand" href="index.html">
+                    <div class="d-flex align-items-center">
+                        <img src="assets/logo-placeholder.png" alt="Symetrique Logo" class="img-fluid navbar-logo">
+                    </div>
+                </a>
+            </div>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+    
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </div>
+                </label>
+            </div>
+    
+            <div class="collapse navbar-collapse justify-content-end mt-3 mt-lg-0" id="navbarNav">
+                <div class="nav-menu-container">
+                    <ul class="nav-menu d-flex flex-column flex-lg-row bg-secondary rounded-pill px-2 py-1">
+    
+                        <li class="nav-item">
+                            <a class="nav-link active rounded-pill px-4 fs-6 fw-light" href="index.html">Home</a>
+                        </li>
+    
+                        <!-- <li class="nav-item">
+                            <a class="nav-link rounded-pill px-4 fs-6 fw-light" href="Capabilities.html"> Symetrique Platform</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-4 fs-6 fw-light" href="commercial_analytics.html"> Commercial Analytics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-4 fs-6 fw-light" href="market_research.html"> Market Research </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-4 fs-6 fw-light" href="patient-registry-services.html">Patient Registry</a>
+                        </li>
+    
+                        <!-- SOLUTIONS DROPDOWN -->
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle rounded-pill px-4 fs-6 fw-light"
+                                href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                               Commertial Solutions
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="solution_commertial_1.html">Patient Services Analytics</a></li>
+                                <li><a class="dropdown-item" href="solution_commertial_2.html">Prescription & Market Access</a></li>
+                                <li><a class="dropdown-item" href="solution_commertial_3.html">Data Platform Strategy</a></li>
+                            </ul>
+                        </li> -->
+    
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-4 fs-6 fw-light" href="about.html">About</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-4 fs-6 fw-light" href="blogs.html">Blogs</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link cta-nav rounded-pill px-4 fs-6 fw-medium" href="about.html#contact">Contact</a>
+                        </li>
+    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <!-- Bootstrap CSS (Make sure this is included in your head) -->
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">-->
+    
+    <!--<nav class="navbar navbar-expand-lg navbar-dark fixed-top">-->
+    <!--    <div class="container">-->
+    <!--        <div class="d-flex align-items-center">-->
+    <!--            <a class="navbar-brand" href="index.html">-->
+    <!--                <div class="d-flex align-items-center">-->
+    <!--                    <img src="assets/logo-placeholder.png" alt="Symetrique Logo" class="img-fluid navbar-logo">-->
+    <!--                </div>-->
+    <!--            </a>-->
+    <!--        </div>-->
+    
+    <!--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"-->
+    <!--            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
+    <!--            <div class="hamburger-icon">-->
+    <!--                <span></span>-->
+    <!--                <span></span>-->
+    <!--                <span></span>-->
+    <!--            </div>-->
+    <!--        </button>-->
+    
+    <!--        <div class="theme-switch-wrapper">-->
+    <!--            <label class="theme-switch" for="checkbox">-->
+    <!--                <input type="checkbox" id="checkbox" />-->
+    <!--                <div class="slider round">-->
+    <!--                    <i class="fas fa-sun"></i>-->
+    <!--                    <i class="fas fa-moon"></i>-->
+    <!--                </div>-->
+    <!--            </label>-->
+    <!--        </div>-->
+    
+    <!--        <div class="collapse navbar-collapse justify-content-end mt-3 mt-lg-0" id="navbarNav">-->
+    <!--            <div class="nav-menu-container">-->
+    <!--                <ul class="nav-menu d-flex flex-column flex-lg-row bg-secondary rounded-pill px-2 py-1">-->
+    
+    <!--                    <li class="nav-item">-->
+    <!--                        <a class="nav-link active rounded-pill px-4 fs-6 fw-light" href="index.html">Home</a>-->
+    <!--                    </li>-->
+    
+    <!--                    <li class="nav-item">-->
+    <!--                        <a class="nav-link rounded-pill px-4 fs-6 fw-light" href="Capabilities.html">Explore Symetrique</a>-->
+    <!--                    </li>-->
+    
+                        <!-- SOLUTIONS DROPDOWN -->
+    <!--                    <li class="nav-item dropdown">-->
+    <!--                        <a class="nav-link dropdown-toggle rounded-pill px-4 fs-6 fw-light"-->
+    <!--                            href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+    <!--                            Solutions-->
+    <!--                        </a>-->
+    
+    <!--                        <ul class="dropdown-menu">-->
+    
+                                <!-- Clinical Solutions -->
+    <!--                            <li class="dropdown-submenu">-->
+    <!--                                <a class="dropdown-item dropdown-toggle" href="#">-->
+    <!--                                    Clinical Solutions-->
+    <!--                                </a>-->
+    <!--                                <ul class="dropdown-menu">-->
+    <!--                                    <li>-->
+    <!--                                        <a class="dropdown-item" href="#">-->
+    <!--                                            Identifying Clinical Trials-->
+    <!--                                        </a>-->
+    <!--                                    </li>-->
+    <!--                                    <li>-->
+    <!--                                        <a class="dropdown-item" href="#">-->
+    <!--                                            Kit Supply Chain Resilience-->
+    <!--                                        </a>-->
+    <!--                                    </li>-->
+    <!--                                </ul>-->
+    <!--                            </li>-->
+    
+                                <!-- Commercial Solutions -->
+    <!--                            <li class="dropdown-submenu">-->
+    <!--                                <a class="dropdown-item dropdown-toggle" href="#">-->
+    <!--                                    Commercial Solutions-->
+    <!--                                </a>-->
+    <!--                                <ul class="dropdown-menu">-->
+    <!--                                    <li>-->
+    <!--                                        <a class="dropdown-item" href="#">-->
+    <!--                                            Market Research-->
+    <!--                                        </a>-->
+    <!--                                    </li>-->
+    <!--                                </ul>-->
+    <!--                            </li>-->
+    
+    <!--                        </ul>-->
+    <!--                    </li>-->
+    
+    <!--                    <li class="nav-item">-->
+    <!--                        <a class="nav-link rounded-pill px-4 fs-6 fw-light" href="about.html">About</a>-->
+    <!--                    </li>-->
+    
+    <!--                    <li class="nav-item">-->
+    <!--                        <a class="nav-link rounded-pill px-4 fs-6 fw-light" href="#">Blogs</a>-->
+    <!--                    </li>-->
+    
+    <!--                    <li class="nav-item">-->
+    <!--                        <a class="nav-link cta-nav rounded-pill px-4 fs-6 fw-medium" href="about.html#contact">Contact</a>-->
+    <!--                    </li>-->
+    
+    <!--                </ul>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</nav>-->
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-gradient-overlay"></div>
+        <div class="hero-particles"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-80">
+                <div class="col-lg-7">
+                    <div class="hero-badge animate-fade-in">
+                        <span class="badge-icon"><i class="fas fa-chart-line"></i></span>
+                        Services-led healthcare intelligence
+                    </div>
+                    <h1 class="hero-title animate-fade-in-up">
+                        AI and<br>
+                        Real-World Data<br>
+                        <span class="gradient-text">Applied to Real Healthcare Decisions</span>
+                    </h1>
+                    
+                    <div class="hero-cta-group animate-fade-in-up delay-2">
+                        <a href="about.html#contact" class="btn btn-primary btn-lg">
+                            <i class="fas fa-calendar-check me-2"></i>Book a Discovery Call
+                        </a>
+                        <!-- <a href="#" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-download me-2"></i>Download Overview
+                        </a> -->
+                    </div>
+                    <div class="hero-trust-badges animate-fade-in-up delay-3">
+                        <span class="trust-label">Trusted by:</span>
+                        <div class="trust-items">
+                            <span class="trust-item">Payers</span>
+                            <span class="trust-divider">|</span>
+                            <span class="trust-item">Biopharma</span>
+                            <span class="trust-divider">|</span>
+                            <span class="trust-item">HTA Bodies</span>
+                            <span class="trust-divider">|</span>
+                            <span class="trust-item">Regulators</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                            
+                    <p class="hero-subtitle animate-fade-in-up delay-1">
+                        Symetrique helps pharma, biotech, diagnostics, and medical device teams turn fragmented healthcare data into actionable insight across Commercial Analytics, Market Research & Intelligence, and Patient Registry Services.
+                    </p>
+                    <p class="hero-subtitle animate-fade-in-up delay-1">
+                        We combine AI-enabled analytics, real-world data, contextual interpretation, and patient-centered evidence models to solve practical business, market, and evidence questions. Our work is designed for teams that need clearer answers — not just more data, dashboards, or disconnected tools.
+                    </p>
+                        
+                        <!-- <div class="floating-stat stat-1 glass-card">
+                            <i class="fas fa-chart-pie"></i>
+                            <div>
+                                <span class="stat-value">87%</span>
+                                <span class="stat-label">Faster Insights</span>
+                            </div>
+                        </div> -->
+                        <!-- <div class="floating-stat stat-2 glass-card">
+                            <i class="fas fa-database"></i>
+                            <div>
+                                <span class="stat-value">250M+</span>
+                                <span class="stat-label">Lives Covered</span>
+                            </div>
+                        </div> -->
+                   
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,90 1440,60 L1440,120 L0,120 Z" fill="url(#wave-gradient)"/>
+                <defs>
+                    <linearGradient id="wave-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:rgba(7, 155, 126, 0.3)"/>
+                        <stop offset="100%" style="stop-color:rgba(7, 155, 126, 0.1)"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+    </section>
+
+       <!-- Our Services -->
+<section class="therapeutic-section">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-badge">Our Services</span>
+            <h2 class="section-title">Three Services. One Data-Grounded Approach.</h2>
+            <p class="section-subtitle">
+                Symetrique brings together healthcare data, AI-enabled analysis, and practical business context to help
+                organizations make better decisions across commercialization, market understanding, and longitudinal
+                evidence generation.
+            </p>
+        </div>
+
+        <div class="therapeutic-cards mt-5">
+            <div class="therapeutic-card">
+                <div class="therapeutic-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Commercial Analytics</h3>
+                <p>
+                    Turn fragmented internal and external data into decision-ready insight for market access, patient
+                    services, reimbursement, provider strategy, and brand performance.
+                </p>
+                <div class="therapeutic-stats">
+                    <a href="/commercial_analytics.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+                </div>
+            </div>
+
+            <div class="therapeutic-card">
+                <div class="therapeutic-icon">
+                    <i class="fas fa-magnifying-glass"></i>
+                </div>
+                <h3>Market Research &amp; Intelligence</h3>
+                <p>
+                    Build stronger market sizing, segmentation, and forecasting using real-world data, global
+                    epidemiology, standards-of-care research, and targeted contextual validation.
+                </p>
+                <div class="therapeutic-stats">
+                    <a href="/market_research.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+                </div>
+            </div>
+
+            <div class="therapeutic-card">
+                <div class="therapeutic-icon">
+                    <i class="fas fa-clipboard-list"></i>
+                </div>
+                <h3>Patient Registry Services</h3>
+                <p>
+                    Design patient-centered, pharma-funded registries that create durable primary data assets for
+                    longitudinal evidence, PRO collection, analysis, publication, and cohort reactivation.
+                </p>
+                <div class="therapeutic-stats">
+                    <a href="/patient-registry-services.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Why Symetrique Section -->
+    <section class="why-section" id="why-symetrique">
+        <div class="container">
+            <div class="text-center mb-3">
+                <span class="section-badge">Why Symetrique</span>
+            </div>
+            <div class="row align-items-start why-hero">
+                <div class="col-lg-6">
+                    <h2 class="section-title-left">A Services Model Built Around Context, Not Just Data.</h2>
+                    <p class="section-description">
+                        Most firms approach healthcare analytics from a single angle — software, outsourced reporting,
+                        survey-based research, or data acquisition. Symetrique takes a more integrated approach.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="why-copy">
+                        <p>
+                            We combine real-world data fluency, contextual interpretation, AI-enabled analysis, and
+                            hands-on execution to help healthcare teams answer high-value questions with more clarity
+                            and less noise.
+                        </p>
+                        <p>
+                            We are not trying to be another generic platform or another broad consulting layer. Our goal
+                            is to work closely on meaningful questions, use the right data in the right context, and
+                            generate outputs that support real commercial, market, and evidence decisions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="why-list mt-4">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="why-list-item">
+                            <span class="why-list-icon"><i class="fas fa-handshake"></i></span>
+                            <span>Services-led, not platform-led</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="why-list-item">
+                            <span class="why-list-icon"><i class="fas fa-database"></i></span>
+                            <span>Built on claims, EHR, registries, public health, market, and internal datasets</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="why-list-item">
+                            <span class="why-list-icon"><i class="fas fa-robot"></i></span>
+                            <span>Strengthened by AI where it improves speed, pattern recognition, and usability</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="why-list-item">
+                            <span class="why-list-icon"><i class="fas fa-compass"></i></span>
+                            <span>Grounded in context from standards of care, protocol logic, SME input, and targeted research</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="why-list-item">
+                            <span class="why-list-icon"><i class="fas fa-bolt"></i></span>
+                            <span>Lean, practical, and designed for action</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,90 1440,60 L1440,120 L0,120 Z" fill="url(#wave-gradient)"/>
+                <defs>
+                    <linearGradient id="wave-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:rgba(7, 155, 126, 0.3)"/>
+                        <stop offset="100%" style="stop-color:rgba(7, 155, 126, 0.1)"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="what-we-do-section">
+        <div class="container">
+            <div class="text-center mb-3">
+                <span class="section-badge">What We Do</span>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="what-we-do-visual">
+                        <img src="assets/Polygon.png" alt="Data Analytics Visualization" class="what-we-do-img animate-float">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <h2 class="section-title-left">Start with the Question, Not the Dataset</h2>
+                    <p class="section-description">
+                        We begin with a clear business or evidence problem. From there, we identify what internal data
+                        already exists, where external datasets add meaningful value, and what contextual interpretation
+                        is required to make the output realistic and useful.
+                    </p>
+                    <p class="section-description">Our approach is deliberately practical:</p>
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Start with a real question</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Use internal data first</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Augment selectively with external data</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Apply AI where it improves speed or insight generation</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Refine the work through stakeholder feedback and business context</span>
+                        </li>
+                    </ul>
+                    <p class="section-description mt-4">
+                        The goal is not another reporting layer. It is insight that helps teams act with more
+                        confidence.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Payer & Value-Based Care Section -->
+    <section class="payer-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="payer-visual">
+                        <div class="payer-card-stack stack-vertical">
+                            <div class="payer-stack-card card-1 glass-card">
+                                <i class="fas fa-hospital-user"></i>
+                                <span>Claims Analysis</span>
+                            </div>
+                            <div class="payer-stack-card card-2 glass-card">
+                                <i class="fas fa-notes-medical"></i>
+                                <span>EHR Integration</span>
+                            </div>
+                            <div class="payer-stack-card card-3 glass-card">
+                                <i class="fas fa-chart-area"></i>
+                                <span>Outcome Tracking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <span class="section-badge">Thought Leadership</span>
+                    <h2 class="section-title-left">How We Think About Better Healthcare Decisions</h2>
+                    <p class="section-description">
+                        Symetrique’s thought leadership reflects the ideas behind our services: commercial analytics
+                        that go beyond reporting, market intelligence built on a stronger real-world-data foundation,
+                        and patient-centered registry models that create more useful longitudinal evidence over time.
+                    </p>
+                    <p class="section-description">
+                        We write about the problems healthcare teams still face — fragmented data, weak market
+                        assumptions, disconnected workflows, and information asymmetry — and the practical ways data,
+                        context, and analytics can improve decision-making.
+                    </p>
+
+                    <div class="payer-features-grid">
+                        <div class="payer-feature">
+                            <div class="payer-feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h4>Commercial Analytics Beyond Reporting</h4>
+                                <p>Why healthcare commercial teams need contextual, decision-oriented insight — not just
+                                    one more dashboard.</p>
+                            </div>
+                        </div>
+                        <div class="payer-feature">
+                            <div class="payer-feature-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div>
+                                <h4>Market Intelligence with a Stronger Data Foundation</h4>
+                                <p>How real-world data, global disease intelligence, and targeted research can produce
+                                    better market sizing and forecasting.</p>
+                            </div>
+                        </div>
+                        <div class="payer-feature">
+                            <div class="payer-feature-icon">
+                                <i class="fas fa-notes-medical"></i>
+                            </div>
+                            <div>
+                                <h4>Patient-Centered Registries and Evidence</h4>
+                                <p>Why registries should do more than support studies — and how they can reduce
+                                    information asymmetry and create durable data assets.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updated Market Access Solutions -->
+    <section class="why-section" id="why-symetrique">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">Example Questions</span>
+                <h2 class="section-title">Examples of the Questions We Work On</h2>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Where are patients getting stuck in the support journey, and which interventions would improve progression?</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>How are payer coverage, formulary dynamics, and prior authorization affecting uptake and brand performance?</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>What is the real market opportunity for a therapy, diagnostic, or device before launch?</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>How does treated versus untreated opportunity vary by geography, specialty, site of care, or access condition?</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>How can a patient registry create a durable primary data asset that compounds in value after study close?</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Where do internal datasets already answer the question, and where is targeted external data or research actually needed?</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Access Solutions -->
+    <!-- <section class="market-access-section" id="solutions">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">Market Access Solutions</span>
+                <h2 class="section-title">Evidence That Drives Coverage & Reimbursement</h2>
+                <p class="section-subtitle">
+                    Comprehensive RWE solutions designed to support every stage of the market access journey
+                </p>
+            </div>
+
+            <div class="solutions-grid mt-5">
+                <div class="solution-card glass-card animate-on-scroll">
+                    <div class="solution-icon-wrapper">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Coverage & Reimbursement Evidence</h3>
+                    <p>Build compelling evidence packages that demonstrate clinical and economic value to support 
+                       payer negotiations and formulary placement decisions.</p>
+                    <ul class="solution-features">
+                        <li>Cost-effectiveness analyses</li>
+                        <li>Budget impact modeling</li>
+                        <li>Comparative outcomes studies</li>
+                    </ul>
+                     <p>Build evidence packages showcasing clinical and economic value to support payer negotiations and formulary decisions through cost-effectiveness, budget impact, and comparative outcomes analyses.</p>
+                </div>
+
+                <div class="solution-card glass-card animate-on-scroll">
+                    <div class="solution-icon-wrapper">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>HTA-Ready Packages</h3>
+                    <p>Structured evidence submissions aligned with NICE, ICER, and global HTA requirements.</p>
+                </div>
+
+                <div class="solution-card glass-card animate-on-scroll">
+                    <div class="solution-icon-wrapper">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Real-World Value Story</h3>
+                    <p>Craft data-driven narratives that communicate therapeutic value to all stakeholders.</p>
+                </div>
+
+                <div class="solution-card glass-card animate-on-scroll">
+                    <div class="solution-icon-wrapper">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Value-Based Contracts</h3>
+                    <p>Design and support outcomes-based agreements aligned with real-world evidence.
+Enable continuous performance monitoring to measure impact, value, and outcomes over time.</p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+
+                </div>
+
+                <div class="solution-card glass-card animate-on-scroll">
+                    <div class="solution-icon-wrapper">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Payer Engagement</h3>
+                    <p>Evidence-driven engagement strategies for health plans and pharmacy benefit managers.</p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+   
+
+    <!-- Therapeutic Areas -->
+
+
+    <!-- Mission Section -->
+    <section class="mission-section-home">
+        <div class="mission-bg-pattern"></div>
+        <div class="container">
+            <div class="mission-content text-center">
+                <span class="section-badge light">Context matters</span>
+                <h2 class="mission-title">
+                    Context Is the Glue That Connects Fragmented Healthcare Data<br>
+                    Across all three services <span class="gradient-text-light">context is what makes analytics useful</span>
+                </h2>
+                <p class="mission-text">
+                    Claims, EHR, registries, formulary data, public health data, epidemiology sources, internal operating data, publications, and primary research each reveal part of the market. But no single source explains the whole picture. Symetrique connects these fragmented inputs through disease-state understanding, care-pathway logic, standards of care, protocol interpretation, and selective expert or primary research.
+That is how data becomes realistic, defensible, and decision-oriented.
+
+                </p>
+                <!-- <div class="mission-stats">
+                    <div class="mission-stat">
+                        <span class="stat-number">250M+</span>
+                        <span class="stat-desc">Lives in Our Data</span>
+                    </div>
+                    <div class="mission-stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-desc">Therapeutic Areas</span>
+                    </div>
+                    <div class="mission-stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-desc">Payer Partners</span>
+                    </div>
+                    <div class="mission-stat">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-desc">Client Satisfaction</span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-card glass-card-dark">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="cta-title">Ready to Transform Your Evidence Strategy?</h2>
+                        <p class="cta-text">
+                            Schedule a 20-minute discovery call to learn how Symetrique can accelerate 
+                            your market access and evidence generation capabilities.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="about.html#contact" class="btn btn-light btn-lg cta-btn">
+                            <i class="fas fa-calendar-alt me-2"></i>Book Discovery Call
+                        </a>
+                        <p class="cta-note">No commitment required | 20 min conversation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 footer-col">
+                        <div class="footer-brand">
+                           
+                            <img href="index.html"  src="assets/Footer_logo.png" alt="Symetrique Logo" class="footer-logo" >
+                            <p class="footer-tagline">Decision-Grade Evidence. Delivered.</p>
+                        </div>
+                        <p class="footer-description">
+                            Transforming real-world healthcare data into actionable evidence for 
+                            payers, biopharma, and healthcare decision-makers.
+                        </p>
+                        <!-- <div class="footer-social">
+                            <a href="https://www.linkedin.com/company/thesymetrique" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/symetrique_physiciandata" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div> -->
+                    </div>
+
+                   
+
+                    <div class="col-lg-2 col-md-6 footer-col">
+                        <h5 class="footer-heading">Company</h5>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <!-- <li><a href="#">Careers</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Contact</a></li> -->
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-col">
+                        <h5 class="footer-heading">Stay Updated</h5>
+                        <p class="footer-newsletter-text">Get insights on RWE, market access, and healthcare analytics.</p>
+                        <form class="footer-newsletter">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                                <button class="btn btn-primary" type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">2026 Symetrique. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <!-- <ul class="footer-legal">
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">HIPAA Compliance</a></li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Footer newsletter AJAX submit
+        (function(){
+            const endpoint = 'https://formsubmit.co/ajax/madhav.kathikar@thesymetrique.com';
+            function showMessage(form, text, ok){
+                let msg = form.querySelector('.newsletter-msg');
+                if(!msg){
+                    msg = document.createElement('div');
+                    msg.className = 'newsletter-msg mt-2';
+                    form.appendChild(msg);
+                }
+                msg.textContent = text;
+                msg.style.color = ok ? 'var(--primary)' : '#ff6b6b';
+            }
+
+            document.querySelectorAll('.footer-newsletter').forEach(form => {
+                form.addEventListener('submit', function(e){
+                    e.preventDefault();
+                    const input = form.querySelector('input[type="email"]');
+                    const btn = form.querySelector('button[type="submit"]');
+                    const email = input && input.value && input.value.trim();
+                    if(!email){ showMessage(form, 'Please enter a valid email.', false); return; }
+                    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+                        showMessage(form, 'Please enter a valid email address.', false); return;
+                    }
+                    btn.disabled = true; btn.textContent = 'Subscribing...';
+                    fetch(endpoint, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                        body: JSON.stringify({ email: email, _subject: 'Newsletter Signup' })
+                    }).then(res => res.json())
+                    .then(data => {
+                        showMessage(form, 'Thanks — you are subscribed!', true);
+                        input.value = '';
+                    }).catch(err => {
+                        showMessage(form, 'Subscription failed. Please try again later.', false);
+                    }).finally(()=>{ btn.disabled = false; btn.textContent = 'Subscribe'; });
+                });
+            });
+        })();
+    </script>
+    
+    <script>
+            document.addEventListener("DOMContentLoaded", function () {
+            
+                document.querySelectorAll('.dropdown-submenu .dropdown-toggle')
+                    .forEach(function (element) {
+            
+                        element.addEventListener('click', function (e) {
+            
+                            e.preventDefault();
+                            e.stopPropagation();
+            
+                            let submenu = this.nextElementSibling;
+            
+                            if (submenu.style.display === "block") {
+                                submenu.style.display = "none";
+                            } else {
+                                document.querySelectorAll('.dropdown-submenu .dropdown-menu')
+                                    .forEach(function (menu) {
+                                        menu.style.display = "none";
+                                    });
+            
+                                submenu.style.display = "block";
+                            }
+                        });
+                    });
+            
+            });
+    </script>
+    <script>
+        // Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => {
+                preloader.classList.add('preloader-hidden');
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 1500);
+        });
+
+        // Hamburger menu animation
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        navbarToggler.addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+
+        // Theme Toggle
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const currentTheme = localStorage.getItem('theme');
+
+        // Logo elements
+        const logoImg = document.querySelector('.navbar-brand img');
+        const footerLogoImg = document.querySelector('.footer-brand img.footer-logo');
+        const logoDarkSrc = 'assets/logo-placeholder.png';
+        const logoLightSrc = 'assets/logo-placeholder_Light.png';
+        const footerDarkSrc = 'assets/Footer_logo.png';
+        const footerLightSrc = 'assets/Footer_logo_Light.png';
+
+        function applyLogos(theme) {
+            if (logoImg) logoImg.src = (theme === 'light') ? logoLightSrc : logoDarkSrc;
+            if (footerLogoImg) footerLogoImg.src = (theme === 'light') ? footerLightSrc : footerDarkSrc;
+        }
+
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            if (currentTheme === 'light') {
+                toggleSwitch.checked = true;
+            }
+            applyLogos(currentTheme);
+        } else {
+            // ensure correct default logos
+            applyLogos(document.documentElement.getAttribute('data-theme') || 'dark');
+        }
+
+        function switchTheme(e) {
+            const theme = e.target.checked ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            applyLogos(theme);
+        }
+
+        toggleSwitch.addEventListener('change', switchTheme, false);
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+
+        // Animate on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        /* Compact / Expand behavior for benefit cards
+           - Cards start compact; hover (desktop) or click expands.
+           - Keyboard accessible (Enter / Space) and toggle button provided.
+        */
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.benefit-card');
+            cards.forEach(card => {
+                // wrap existing paragraph and following nodes into .card-details if not already wrapped
+                if (!card.querySelector('.card-details')) {
+                    const childNodes = Array.from(card.childNodes);
+                    let foundP = false;
+                    const details = document.createElement('div');
+                    details.className = 'card-details';
+                    childNodes.forEach(node => {
+                        if (!foundP && node.nodeType === 1 && node.tagName.toLowerCase() === 'p') {
+                            foundP = true;
+                        }
+                        if (foundP) {
+                            details.appendChild(node);
+                        }
+                    });
+                    if (foundP) card.appendChild(details);
+                }
+
+                // add toggle button
+                if (!card.querySelector('.card-toggle')) {
+                    const toggle = document.createElement('button');
+                    toggle.type = 'button';
+                    toggle.className = 'card-toggle';
+                    toggle.setAttribute('aria-label', 'Expand details');
+                    toggle.innerHTML = '<i class="fas fa-chevron-down"></i>';
+                    card.appendChild(toggle);
+
+                    // make the card keyboard-focusable and accessible
+                    card.tabIndex = 0;
+                    card.setAttribute('role', 'button');
+                    card.setAttribute('aria-expanded', 'false');
+
+                    // initialize compact
+                    card.classList.add('compact');
+
+                    function setExpanded(exp) {
+                        if (exp) {
+                            card.classList.add('expanded');
+                            card.classList.remove('compact');
+                            card.setAttribute('aria-expanded', 'true');
+                            toggle.setAttribute('aria-label', 'Collapse details');
+                        } else {
+                            card.classList.remove('expanded');
+                            card.classList.add('compact');
+                            card.setAttribute('aria-expanded', 'false');
+                            toggle.setAttribute('aria-label', 'Expand details');
+                        }
+                    }
+
+                    toggle.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        setExpanded(!card.classList.contains('expanded'));
+                    });
+
+                    card.addEventListener('click', function (e) {
+                        if (e.target.closest('a') || e.target.closest('button')) return;
+                        setExpanded(!card.classList.contains('expanded'));
+                    });
+
+                    card.addEventListener('keydown', function (e) {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            setExpanded(!card.classList.contains('expanded'));
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+    <script src="nav-active.js"></script>
+</body>
+
+</html>

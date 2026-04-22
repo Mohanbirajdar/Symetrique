@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Analytics Solutions | Symetrique - Market Access & Payer Intelligence</title>
+    <meta name="description"
+        content="Transform real-world healthcare data into commercial insights. Symetrique's commercial analytics platform supports market access, payer strategy, patient services, and commercial decision-making." />
+    <meta name="keywords"
+        content="commercial analytics, market access, payer analytics, patient services, prescription analytics, healthcare market strategy, commercial intelligence, Symetrique Analytics, Symetrique Commercial, Symetrique Market Access" />
+    <meta name="author" content="Symetrique" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.thesymetrique.com/commercial-analytics" />
+    <meta property="og:title" content="Commercial Analytics Solutions | Symetrique" />
+    <meta property="og:description"
+        content="Transform healthcare data into commercial insights for market access, patient services, and payer strategy." />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Commercial Analytics Solutions | Symetrique" />
+    <meta property="twitter:description" content="Transform healthcare data into commercial insights for market access, patient services, and payer strategy." />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo-placeholder.png" />
+    <link rel="shortcut icon" type="image/png" href="assets/logo-placeholder.png" />
+    <link rel="apple-touch-icon" href="assets/logo-placeholder.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="Capabilities.css">
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+        /* Preloader fallback: auto-hide after 3s in case JS errors prevent removal */
+        @keyframes preloaderFadeOut {
+            to { opacity: 0; visibility: hidden; pointer-events: none; }
+        }
+        .preloader {
+            animation: preloaderFadeOut 0.6s ease 3s forwards;
+        }
+        /* Ensure if JS is disabled the page is visible */
+        noscript ~ .preloader { display: none !important; }
+
+        /* Light mode navbar and logo fix */
+        [data-theme="light"] .navbar {
+            background-color: rgba(255, 255, 255, 0.98) !important;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        [data-theme="light"] .navbar-brand img {
+            filter: brightness(0.3) contrast(1.2);
+        }
+
+        [data-theme="light"] .nav-link {
+            color: #333 !important;
+        }
+
+        [data-theme="light"] .nav-link:hover {
+            color: #07a365 !important;
+        }
+
+        [data-theme="light"] .dropdown-menu {
+            background-color: #f8f9fa;
+            border: 1px solid rgba(7, 155, 126, 0.1);
+        }
+
+        [data-theme="light"] .dropdown-item {
+            color: #333;
+        }
+
+        [data-theme="light"] .dropdown-item:hover {
+            background-color: rgba(7, 155, 126, 0.1);
+            color: #07a365;
+        }
+
+        /* Custom styles for Commercial Analytics */
+        .commercial-analytics-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: var(--bg-dark);
+            padding-top: 100px;
+            overflow: hidden;
+        }
+
+        .capabilities-hero {
+            position: relative;
+            padding-bottom: 250px;
+        }
+
+        .commercial-analytics-hero::before,
+        .commercial-analytics-hero::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 220px;
+            pointer-events: none;
+            z-index: 0;
+            background-position: center bottom;
+            background-repeat: repeat-x;
+            background-size: auto 220px;
+            opacity: 0.75;
+        }
+
+        .commercial-analytics-hero::before {
+            background-image: url("assets/chart_1.png");
+            transform: translateY(6%);
+            opacity: 0.6;
+        }
+
+        .commercial-analytics-hero::after {
+            background-image: url("assets/chart_2.png");
+            transform: translateY(0%);
+            opacity: 0.75;
+        }
+
+        .commercial-analytics-hero > .container,
+        .commercial-analytics-hero .hero-gradient-overlay,
+        .commercial-analytics-hero .hero-grid {
+            position: relative;
+            z-index: 2;
+        }
+
+        .commercial-analytics-hero .hero-gradient-overlay {
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(ellipse 80% 60% at 80% 20%, rgba(7, 155, 126, 0.2) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 80% at 20% 80%, rgba(0, 212, 170, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(7, 155, 126, 0.05) 0%, transparent 60%);
+            pointer-events: none;
+            animation: pulseGlow 8s ease-in-out infinite;
+        }
+
+        .commercial-analytics-hero .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(7, 155, 126, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(7, 155, 126, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse 80% 50% at 50% 50%, black 40%, transparent 100%);
+            pointer-events: none;
+        }
+
+        [data-theme="light"] .commercial-analytics-hero {
+            background-color: #ffffff;
+        }
+
+        [data-theme="light"] .commercial-analytics-hero::before,
+        [data-theme="light"] .commercial-analytics-hero::after {
+            opacity: 0.08;
+        }
+
+        [data-theme="light"] .commercial-analytics-hero .hero-gradient-overlay {
+            background: 
+                radial-gradient(ellipse 80% 60% at 80% 20%, rgba(7, 155, 126, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 80% at 20% 80%, rgba(0, 212, 170, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(7, 155, 126, 0.01) 0%, transparent 60%);
+        }
+
+        [data-theme="light"] .commercial-analytics-hero .hero-grid {
+            background-image: 
+                linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+        }
+
+        /* Solutions Grid Cards */
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            width: 100%;
+        }
+
+        .commercial-analytics-hero .solutions-grid {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .solution-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            min-height: 300px;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .solution-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #07a365, #00d4aa);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(7, 155, 126, 0.5);
+            box-shadow: 0 20px 40px rgba(7, 155, 126, 0.15);
+        }
+
+        .solution-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .solution-card-icon {
+            font-size: 3rem;
+            color: #07a365;
+            margin-bottom: 1rem;
+        }
+
+        .solution-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .solution-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .solution-card-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #07a365;
+            font-weight: 600;
+            transition: gap 0.3s ease;
+        }
+
+        .solution-card:hover .solution-card-cta {
+            gap: 0.8rem;
+        }
+
+        .solution-card-cta i {
+            transition: transform 0.3s ease;
+        }
+
+        .solution-card:hover .solution-card-cta i {
+            transform: translateX(4px);
+        }
+
+        [data-theme="light"] .solution-card {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(7, 155, 126, 0.1);
+        }
+
+        [data-theme="light"] .solution-card:hover {
+            background: rgba(255, 255, 255, 0.95);
+            border-color: rgba(7, 155, 126, 0.3);
+            box-shadow: 0 20px 40px rgba(7, 155, 126, 0.1);
+        }
+
+        .hero-wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            height: 120px;
+        }
+
+        .hero-wave svg {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Symetrique Commercial Analytics",
+        "url": "https://www.thesymetrique.com/commercial-analytics",
+        "description": "Comprehensive commercial analytics solutions for market access and commercial strategies"
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <svg viewBox="0 0 100 100" class="preloader-circle">
+                    <circle cx="50" cy="50" r="45" class="circle-bg"/>
+                    <circle cx="50" cy="50" r="45" class="circle-progress"/>
+                </svg>
+                <div class="preloader-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+            </div>
+            <div class="preloader-text">
+                <span class="preloader-brand">Symetrique</span>
+                <span class="preloader-tagline">Decision-Grade Evidence</span>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+  
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand" href="index.html">
+                    <div class="d-flex align-items-center">
+                        <img src="assets/logo-placeholder.png" alt="Symetrique Logo" class="img-fluid navbar-logo">
+                    </div>
+                </a>
+            </div>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+    
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </div>
+                </label>
+            </div>
+    
+            <div class="collapse navbar-collapse justify-content-end mt-3 mt-lg-0" id="navbarNav">
+                <div class="nav-menu-container">
+                    <ul class="nav-menu d-flex flex-column flex-lg-row bg-secondary rounded-pill px-2 py-1">
+    
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-4 fs-6 fw-light" href="index.html">Home</a>
+                        </li>
+    
+                        <!-- <li class="nav-item">
+                            <a class="nav-link rounded-pill px-4 fs-6 fw-light" href="Capabilities.html">Symetrique Platform</a>
+                        </li> -->
+                        
+                        <li class="nav-item">
+                            <a class="nav-link active rounded-pill px-4 fs-6 fw-light" href="commercial_analytics.html"> Commercial Analytics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-4 fs-6 fw-light" href="market_research.html">Market Research</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-4 fs-6 fw-light" href="patient-registry-services.html">Patient Registry</a>
+                        </li>
+                        <!-- SOLUTIONS DROPDOWN -->
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle rounded-pill px-4 fs-6 fw-light"
+                                href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                               Commercial Solutions
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="solution_commercial_1.html">Patient Services Analytics</a></li>
+                                <li><a class="dropdown-item" href="solution_commercial_2.html">Prescription & Market Access</a></li>
+                                <li><a class="dropdown-item" href="solution_commercial_3.html">Data Platform Strategy</a></li>
+                            </ul>
+                        </li> -->
+    
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-4 fs-6 fw-light" href="about.html">About</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-4 fs-6 fw-light" href="blogs.html">Blogs</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link cta-nav rounded-pill px-4 fs-6 fw-medium" href="about.html#contact">Contact</a>
+                        </li>
+    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+            <!-- Hero Section -->
+    <section class="capabilities-hero mt-300">
+        <div class="hero-gradient-overlay"></div>
+        <div class="hero-grid"></div>
+        <div class="container">
+            <!-- <div class="row align-items-center">
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="hero-dashboard">
+                        <div style="font-size: 120px; text-align: center; color: #0ff6c6; opacity: 0.9;">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <h1 class="hero-title animate-fade-in-up">
+                        Commercial Analytics Capabilities
+                    </h1>
+                    <p class="hero-subtitle animate-fade-in-up delay-1">
+                        Symetrique helps pharma teams solve complex commercial questions through a practical combination of analytics, data understanding, and business context. Our capabilities are designed to support leaders across patient services, market access, and broader commercial decision-making — with insight that is grounded in real operating needs and adaptable to changing market conditions.
+                    </p>
+                    
+                </div>
+            </div> -->
+
+            <div class="row align-items-center">
+                <div class="col-lg-6 d-flex align-items-center">
+                    <div class="hero-content-left">
+                        <h1 class="hero-title animate-fade-in-up">
+                            Commercial Analytics Capabilities
+                        </h1>
+                        <!-- <p class="hero-tagline animate-fade-in-up delay-1" style="margin-top: 1.5rem; color: rgba(255, 255, 255, 0.8); font-size: 1.1rem;">
+                            A stronger foundation for market sizing, segmentation, and forecasting  Across pharma, diagnostics, and medical devices.
+                        </p> -->
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-content-right">
+                        <h5 class="animate-fade-in-up" style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem; color: #0ff6c6;">
+                           
+                        </h5>
+                        <p class="hero-subtitle animate-fade-in-up">
+                           Symetrique helps pharma teams solve complex commercial questions through a practical combination of analytics, data understanding, and business context. Our capabilities are designed to support leaders across patient services, market access, and broader commercial decision-making — with insight that is grounded in real operating needs and adaptable to changing market conditions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOLUTIONS CARDS GRID IN HERO -->
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="solutions-grid">
+
+                        <!-- Solution 1: Patient Services Analytics -->
+                        <a href="solution_commercial_1.html" class="solution-card glass-card animate-on-scroll">
+                            <div class="solution-card-icon">
+                                <i class="fas fa-chart-area"></i>
+                            </div>
+                            <h3>Patient Services Analytics</h3>
+                            <p>
+                                 Symetrique helps specialty pharma teams improve patient movement through the support journey by analyzing enrollment, prior authorization, hub operations, specialty pharmacy coordination, and patient progression. Our work focuses on identifying where patients get stuck, what is driving delay, and which interventions can improve performance across the patient services model.
+                            </p>
+                            <div class="solution-card-cta">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+
+                        <!-- Solution 2: Prescription & Market Access -->
+                        <a href="solution_commercial_2.html" class="solution-card glass-card animate-on-scroll">
+                            <div class="solution-card-icon">
+                                <i class="fas fa-prescription-bottle-medical"></i>
+                            </div>
+                            <h3>Market Access Analytics</h3>
+                            <p>
+                                Symetrique helps pharma teams understand how payer coverage, formulary positioning, prior authorization requirements, prescription progression, and geographic variation shape therapy access. By turning fragmented access signals into practical insight, we support better decisions across market access strategy, reimbursement planning, and commercial execution.
+                
+                            </p>
+                            <div class="solution-card-cta">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+
+                        <!-- Solution 3: Data Platform Strategy -->
+                        <a href="solution_commercial_3.html" class="solution-card glass-card animate-on-scroll">
+                            <div class="solution-card-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3>Contextual Insights</h3>
+                            <p>
+                                Symetrique helps organizations get more value from their internal and external data assets by combining claims, prescription, formulary, hub, and commercial datasets with business context and SME knowledge. Through continuous feedback and refinement, we create analytics that stay relevant in dynamic commercial and access environments.
+                
+                            </p>
+                            <div class="solution-card-cta">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,90 1440,60 L1440,120 L0,120 Z" fill="url(#wave-gradient)"/>
+                <defs>
+                    <linearGradient id="wave-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:rgba(7, 155, 126, 0.3)"/>
+                        <stop offset="100%" style="stop-color:rgba(7, 155, 126, 0.1)"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+    </section>
+
+
+        <!-- CTA Section -->
+        <section class="cta-section py-5 position-relative">
+
+
+        <!-- Footer -->
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 footer-col">
+                        <div class="footer-brand">
+                            <img src="assets/Footer_logo.png" alt="Symetrique Logo" class="footer-logo">
+                            <p class="footer-tagline">Decision-Grade Evidence. Delivered.</p>
+                        </div>
+                        <p class="footer-description">
+                            Transforming real-world healthcare data into actionable evidence for 
+                            payers, biopharma, and healthcare decision-makers.
+                        </p>
+                        <!-- <div class="footer-social">
+                            <a href="https://www.linkedin.com/company/thesymetrique" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/symetrique_physiciandata" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div> -->
+                    </div>
+
+                    <!-- <div class="col-lg-2 col-md-6 footer-col">
+                        <h5 class="footer-heading">SOLUTIONS</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Market Access</a></li>
+                            <li><a href="#">HTA Evidence</a></li>
+                            <li><a href="#">Payer Analytics</a></li>
+                            <li><a href="#">RWE Studies</a></li>
+                        </ul>
+                    </div> -->
+                    <div class="col-lg-2 col-md-6 footer-col">
+                        <h5 class="footer-heading">COMPANY</h5>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <!-- <li><a href="#">Careers</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="about.html#contact">Contact</a></li> -->
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-col">
+                        <h5 class="footer-heading">STAY UPDATED</h5>
+                        <p class="footer-newsletter-text">Get insights on RWE, market access, and healthcare analytics.</p>
+                        <form class="footer-newsletter">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                                <button class="btn btn-primary" type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                        <script>
+                            (function(){
+                                const endpoint = 'https://formsubmit.co/ajax/madhav.kathikar@thesymetrique.com';
+                                function showMessage(form, text, ok){
+                                    let msg = form.querySelector('.newsletter-msg');
+                                    if(!msg){ msg = document.createElement('div'); msg.className = 'newsletter-msg mt-2'; form.appendChild(msg); }
+                                    msg.textContent = text;
+                                    msg.style.color = ok ? 'var(--primary)' : '#ff6b6b';
+                                }
+                                const form = document.querySelector('.footer-newsletter');
+                                if(form){
+                                    form.addEventListener('submit', function(e){
+                                        e.preventDefault();
+                                        const input = form.querySelector('input[type="email"]');
+                                        const btn = form.querySelector('button[type="submit"]');
+                                        const email = input && input.value && input.value.trim();
+                                        if(!email){ showMessage(form, 'Please enter a valid email.', false); return; }
+                                        if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ showMessage(form, 'Please enter a valid email address.', false); return; }
+                                        btn.disabled = true; btn.textContent = 'Subscribing...';
+                                        fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ email: email, _subject: 'Newsletter Signup' }) })
+                                        .then(res => res.json()).then(data => { showMessage(form, 'Thanks — you are subscribed!', true); input.value = ''; }).catch(err => { showMessage(form, 'Subscription failed. Please try again later.', false); }).finally(()=>{ btn.disabled = false; btn.textContent = 'Subscribe'; });
+                                    });
+                                }
+                            })();
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">2026 Symetrique. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <ul class="footer-legal">
+                            <!-- <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">HIPAA Compliance</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </body>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Preloader JS -->
+    <script>
+        // Preloader
+        window.addEventListener('load', function () {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 600);
+            }
+        });
+
+        // Fallback preloader removal
+        setTimeout(() => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.display = 'none';
+            }
+        }, 3000);
+    </script>
+
+    <!-- Theme Toggle JS (from nav-active.js logic) -->
+    <script>
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+
+        if (currentTheme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            if (toggleSwitch) toggleSwitch.checked = true;
+        }
+
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        if (toggleSwitch) {
+            toggleSwitch.addEventListener('change', switchTheme);
+        }
+    </script>
+
+    <!-- Intersection Observer for animations -->
+    <script>
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</html>

@@ -1,0 +1,31 @@
+# All crawlers allowed - maximizes Symetrique brand search coverage
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.php$
+Disallow: /cgi-bin/
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Allow access to CSS and JS files for Google (brand page rendering)
+User-agent: Googlebot
+Allow: /*.css$
+Allow: /*.js$
+Crawl-delay: 0
+
+# Bing bot optimization for brand search
+User-agent: Bingbot
+Allow: /*.css$
+Allow: /*.js$
+Crawl-delay: 1
+
+# Standard crawl delay for other bots
+User-agent: *
+Crawl-delay: 1
+
+# Sitemap location (highest priority for brand pages)
+Sitemap: https://www.thesymetrique.com/sitemap.xml
+
+# Comment: This robots.txt is optimized to maximize crawling of Symetrique brand pages
+# to ensure all brand name variations rank properly in search results.

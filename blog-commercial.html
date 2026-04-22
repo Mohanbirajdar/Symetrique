@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Analytics Blog | Symetrique</title>
+    <meta name="description" content="Why commercial analytics must go beyond reporting, how patient services analytics drives commercial performance, and why contextual insights are the connective tissue of healthcare strategy." />
+    <meta name="keywords" content="Commercial Analytics, Healthcare Analytics, Patient Services, Market Access, Contextual Insights, Symetrique" />
+    <meta name="author" content="Symetrique" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="icon" type="image/png" href="assets/logo-placeholder.png" />
+    <link rel="shortcut icon" type="image/png" href="assets/logo-placeholder.png" />
+    <link rel="apple-touch-icon" href="assets/logo-placeholder.png" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="blog.css">
+
+    <style>
+        /* ── Post feature image banner (teal — matches Healthcare IT theme) ── */
+        .post-feature-img {
+            width: 100%;
+            border-radius: var(--blog-radius-sm);
+            margin-bottom: 36px;
+            min-height: 210px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--blog-glass-border);
+        }
+        .pfi-dec { position: absolute; border-radius: 50%; pointer-events: none; }
+        .pfi-center { display: flex; flex-direction: column; align-items: center; gap: 14px; position: relative; z-index: 2; text-align: center; padding: 32px; }
+        .pfi-icon-bg { width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.1rem; }
+        .pfi-label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+        .pfi-post-badge { position: absolute; top: 16px; right: 20px; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; padding: 4px 12px; border-radius: 50px; }
+        .pfi-teal { background: linear-gradient(135deg, rgba(7,155,126,0.1) 0%, rgba(6,125,102,0.05) 100%); }
+        .pfi-teal .pfi-dec-1 { width: 240px; height: 240px; top: -90px; right: -70px; background: radial-gradient(circle, rgba(7,155,126,0.22) 0%, transparent 65%); }
+        .pfi-teal .pfi-dec-2 { width: 160px; height: 160px; bottom: -60px; left: -50px; background: radial-gradient(circle, rgba(20,184,166,0.16) 0%, transparent 65%); }
+        .pfi-teal .pfi-dec-3 { width: 80px; height: 80px; top: 20px; left: 30%; background: radial-gradient(circle, rgba(7,155,126,0.12) 0%, transparent 70%); }
+        .pfi-teal .pfi-icon-bg { background: rgba(7,155,126,0.18); border: 1px solid rgba(7,155,126,0.35); color: #079b7e; }
+        .pfi-teal .pfi-label { color: rgba(7,155,126,0.75); }
+        .pfi-teal .pfi-post-badge { background: rgba(7,155,126,0.12); border: 1px solid rgba(7,155,126,0.25); color: #079b7e; }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <svg viewBox="0 0 100 100" class="preloader-circle">
+                    <circle cx="50" cy="50" r="45" class="circle-bg"/>
+                    <circle cx="50" cy="50" r="45" class="circle-progress"/>
+                </svg>
+                <div class="preloader-icon"><i class="fas fa-chart-bar"></i></div>
+            </div>
+            <div class="preloader-text">
+                <span class="preloader-brand">Symetrique</span>
+                <span class="preloader-tagline">Decision-Grade Evidence</span>
+            </div>
+            <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/logo-placeholder.png" alt="Symetrique Logo" class="img-fluid navbar-logo">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger-icon"><span></span><span></span><span></span></div>
+            </button>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"><i class="fas fa-sun"></i><i class="fas fa-moon"></i></div>
+                </label>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end mt-3 mt-lg-0" id="navbarNav">
+                <div class="nav-menu-container">
+                    <ul class="nav-menu d-flex flex-column flex-lg-row bg-secondary rounded-pill px-2 py-1">
+                        <li class="nav-item"><a class="nav-link rounded-pill px-4 fs-6 fw-light" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link rounded-pill px-4 fs-6 fw-light" href="commercial_analytics.html">Commercial Analytics</a></li>
+                        <li class="nav-item"><a class="nav-link rounded-pill px-4 fs-6 fw-light" href="market_research.html">Market Research</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-4 fs-6 fw-light" href="patient-registry-services.html">Patient Registry</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link rounded-pill px-4 fs-6 fw-light" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link active rounded-pill px-4 fs-6 fw-light" href="blogs.html">Blogs</a></li>
+                        <li class="nav-item"><a class="nav-link cta-nav rounded-pill px-4 fs-6 fw-medium" href="about.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="blog-hero">
+        <div class="blog-hero-particles"></div>
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 animate-fade-in-up">
+                    <a href="blogs.html" class="blog-back-link mb-4 d-inline-flex align-items-center gap-2">
+                        <i class="fas fa-arrow-left"></i> All Blogs
+                    </a>
+                    <span class="section-badge mb-3 d-inline-block">
+                        <i class="fas fa-chart-bar me-2"></i>Commercial Analytics
+                    </span>
+                    <h1 class="blog-hero-title">
+                        Commercial <span class="gradient-text">Insights</span>
+                    </h1>
+                    <p class="blog-hero-subtitle">
+                        Beyond reporting — the analytics frameworks, patient services intelligence, and contextual insights that drive decisions in biopharma and MedTech.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="blog-hero-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+                <path fill="var(--bg-primary, #0a0f1a)" fill-opacity="1"
+                    d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-content-section">
+        <div class="container">
+            <div class="row g-4 g-lg-5">
+
+                <!-- ===== POSTS ===== -->
+                <div class="col-lg-8">
+
+                    <!-- ─── POST 1 ─── -->
+                    <article class="blog-post glass-card animate-on-scroll" id="ca-post-1">
+                        <div class="post-meta-bar">
+                            <span class="post-series-badge">
+                                <i class="fas fa-chart-line me-1"></i>Commercial Analytics — Post 1
+                            </span>
+                            <span class="post-date"><i class="far fa-calendar-alt me-1"></i>April 2026</span>
+                        </div>
+
+                        <h2 class="post-title">
+                            Why Commercial Analytics in Healthcare Has to Be <span class="gradient-text">More Than Reporting</span>
+                        </h2>
+
+                        <div class="post-tags">
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Commercial Analytics</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Market Access</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Healthcare Strategy</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Decision Support</span>
+                        </div>
+
+                        <!-- Feature Image -->
+                        <!--<div class="post-feature-img pfi-teal">-->
+                        <!--    <div class="pfi-dec pfi-dec-1"></div>-->
+                        <!--    <div class="pfi-dec pfi-dec-2"></div>-->
+                        <!--    <div class="pfi-dec pfi-dec-3"></div>-->
+                            <!--<div class="pfi-center">-->
+                            <!--    <div class="pfi-icon-bg"><i class="fas fa-chart-line"></i></div>-->
+                            <!--    <div class="pfi-label">Commercial Performance &amp; Decision Intelligence</div>-->
+                            <!--</div>-->
+                        <!--    <span class="pfi-post-badge">Post 01</span>-->
+                        <!--</div>-->
+
+                        <div class="post-body">
+                            <p class="post-lead">
+                                Healthcare organizations have no shortage of reports. Dashboards track prescriptions, coverage changes, hub performance, patient support volumes, specialty pharmacy activity, and brand metrics. Yet despite all of that visibility, many teams still struggle to answer a simple question: what should we do differently?
+                            </p>
+
+                            <h3 class="post-section-heading">Reporting vs. Commercial Analytics</h3>
+                            <p>
+                                That is the difference between reporting and commercial analytics. Reporting tells you what happened. Commercial analytics is supposed to help explain why it happened, what it means, and where action should be taken. In healthcare, that difference matters because commercial performance is shaped by a web of connected forces: payer coverage, formulary dynamics, prior authorization requirements, provider behavior, patient support friction, geography, site of care, and standards of care. Looking at one report at a time rarely gives leaders the full picture.
+                            </p>
+
+                            <h3 class="post-section-heading">The Prescription Performance Example</h3>
+                            <p>
+                                Take prescription performance as an example. A brand may see slower-than-expected uptake. A traditional reporting model may show declining conversion at one point in the funnel. But that alone does not reveal whether the issue is a coverage restriction, a provider office workflow barrier, a prior authorization bottleneck, a specialty pharmacy delay, a regional access gap, or a shift in competitive behavior. Without that context, teams are left reacting to symptoms rather than understanding causes.
+                            </p>
+                            <blockquote class="post-quote">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                Commercial analytics becomes valuable when it helps bridge functions and connect signals into something more actionable. The goal is not to produce one more dashboard. The goal is to help leaders understand the structure of the problem well enough to act with confidence.
+                            </blockquote>
+
+                            <h3 class="post-section-heading">Why Cross-Functional Connection Matters</h3>
+                            <p>
+                                This is why commercial analytics has to be more than reporting. It needs to connect data sources, interpret market conditions, and help decision-makers understand where friction is concentrated and where intervention matters most.
+                            </p>
+                            <p>
+                                In healthcare, those questions are often cross-functional. Patient services may see one piece of the problem. Market access sees another. Field reimbursement sees another. Brand teams may see performance outcomes without seeing the operational barriers underneath them. Commercial analytics becomes valuable when it helps bridge those functions and connect the signals into something more actionable.
+                            </p>
+
+                            <h3 class="post-section-heading">Build Around Decisions, Not Visibility</h3>
+                            <p>
+                                That does not mean every organization needs a massive analytics platform. In fact, the opposite may be true. The most useful analytics often start with one focused business question: where are patients getting stuck, which payer dynamics are changing, why are certain geographies underperforming, or how is access friction affecting uptake? Once the right question is clear, data can be assembled and interpreted in a way that supports action.
+                            </p>
+
+                            <div class="post-perspective">
+                                <p class="post-perspective-label"><i class="fas fa-chart-line"></i> The Symetrique Perspective</p>
+                                <p class="post-perspective-text">At Symetrique, we believe commercial analytics should be built around decisions, not just visibility. In healthcare, that is the real difference between seeing the market and understanding it.</p>
+                            </div>
+
+                            <div class="post-attribution">
+                                <i class="fas fa-pen-nib me-2"></i>
+                                <strong>Symetrique Commercial Analytics Team</strong>
+                            </div>
+                            <div class="post-hashtags">
+                                <span>#CommercialAnalytics</span><span>#MarketAccess</span><span>#HealthcareStrategy</span>
+                                <span>#DecisionSupport</span><span>#Symetrique</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="post-divider"><span><i class="fas fa-circle-dot"></i></span></div>
+
+                    <!-- ─── POST 2 ─── -->
+                    <article class="blog-post glass-card animate-on-scroll" id="ca-post-2">
+                        <div class="post-meta-bar">
+                            <span class="post-series-badge">
+                                <i class="fas fa-route me-1"></i>Commercial Analytics — Post 2
+                            </span>
+                            <span class="post-date"><i class="far fa-calendar-alt me-1"></i>April 2026</span>
+                        </div>
+
+                        <h2 class="post-title">
+                            Patient Services Analytics: The <span class="gradient-text">Missing Link</span> Between Support Programs and Commercial Performance
+                        </h2>
+
+                        <div class="post-tags">
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Patient Services</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Hub Analytics</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Market Access</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Specialty Pharma</span>
+                        </div>
+
+                        <!-- Feature Image -->
+                        <!--<div class="post-feature-img pfi-teal">-->
+                        <!--    <div class="pfi-dec pfi-dec-1"></div>-->
+                        <!--    <div class="pfi-dec pfi-dec-2"></div>-->
+                        <!--    <div class="pfi-dec pfi-dec-3"></div>-->
+                        <!--    <div class="pfi-center">-->
+                        <!--        <div class="pfi-icon-bg"><i class="fas fa-route"></i></div>-->
+                        <!--        <div class="pfi-label">Patient Journey &amp; Support Program Intelligence</div>-->
+                        <!--    </div>-->
+                        <!--    <span class="pfi-post-badge">Post 02</span>-->
+                        <!--</div>-->
+
+                        <div class="post-body">
+                            <p class="post-lead">
+                                Patient services programs play an increasingly important role in healthcare commercial strategy. They help patients navigate enrollment, benefits investigation, prior authorization, hub coordination, specialty pharmacy pathways, affordability support, and therapy initiation. But for many organizations, patient services still sits in a separate operational lane rather than being treated as a strategic source of commercial insight. That is a missed opportunity.
+                            </p>
+
+                            <h3 class="post-section-heading">Beyond KPI Tracking</h3>
+                            <p>
+                                Patient services analytics is not just about operational KPI tracking. At its best, it helps organizations understand how friction in the support journey influences treatment progression, provider experience, and ultimately brand performance. It connects what is happening operationally to what is happening commercially.
+                            </p>
+                            <p>
+                                This matters because many commercial outcomes are shaped before a prescription ever becomes a successful therapy start. Patients may stall during enrollment. Prior authorizations may be delayed or denied. Cases may remain pending at the hub. Specialty pharmacy handoffs may break down. Patients may abandon or defer treatment for reasons that are not visible in top-line performance metrics. When these barriers accumulate, they affect uptake, adherence, retention, and the real-world performance of the brand.
+                            </p>
+
+                            <h3 class="post-section-heading">Where Barriers Accumulate</h3>
+                            <p>
+                                Yet too often, patient services data is treated as a reporting layer rather than an analytic asset. Teams may track case counts, turnaround times, or program volumes, but they do not always connect those signals to a broader understanding of where patients are getting stuck, why progression is slowing, or which interventions are actually improving movement.
+                            </p>
+                            <blockquote class="post-quote">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                Patient services analytics should help organizations understand how support models are influencing actual market outcomes. When that connection becomes clear, patient services becomes more than a support function — it becomes a source of strategic advantage.
+                            </blockquote>
+
+                            <h3 class="post-section-heading">A Stronger Analytics Model</h3>
+                            <p>
+                                A stronger analytics model looks at the patient journey more holistically. It asks where cases move smoothly and where they stall. It analyzes pending and canceled patient populations. It looks for patterns across payer type, geography, specialty pharmacy, provider segment, or case workflow. It helps distinguish between operational noise and meaningful bottlenecks. Most importantly, it helps patient services leaders and commercial teams understand which barriers are reducing therapy progression and where action should be prioritized.
+                            </p>
+
+                            <div class="post-callout post-callout-teal">
+                                <div class="post-callout-icon"><i class="fas fa-puzzle-piece"></i></div>
+                                <div class="post-callout-text">
+                                    <strong>The patient journey is not just an operational process. It is a commercial reality.</strong> In specialty and rare-disease settings, even small inefficiencies in the support model can have outsized commercial consequences.
+                                </div>
+                            </div>
+
+                            <h3 class="post-section-heading">A Cross-Functional Conversation</h3>
+                            <p>
+                                Patient services analytics also helps create a better conversation across functions. Instead of treating support programs as separate from market access, reimbursement, or brand strategy, organizations can start to see them as part of the same commercial system.
+                            </p>
+
+                            <div class="post-perspective">
+                                <p class="post-perspective-label"><i class="fas fa-chart-line"></i> The Symetrique Perspective</p>
+                                <p class="post-perspective-text">At Symetrique, we believe patient services analytics should do more than describe program performance. It should help healthcare organizations understand how support models are influencing actual market outcomes. When that connection becomes clear, patient services becomes more than a support function — it becomes a source of strategic advantage.</p>
+                            </div>
+
+                            <div class="post-attribution">
+                                <i class="fas fa-pen-nib me-2"></i>
+                                <strong>Symetrique Commercial Analytics Team</strong>
+                            </div>
+                            <div class="post-hashtags">
+                                <span>#PatientServices</span><span>#HubAnalytics</span><span>#MarketAccess</span>
+                                <span>#SpecialtyPharma</span><span>#CommercialAnalytics</span><span>#Symetrique</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="post-divider"><span><i class="fas fa-circle-dot"></i></span></div>
+
+                    <!-- ─── POST 3 ─── -->
+                    <article class="blog-post glass-card animate-on-scroll" id="ca-post-3">
+                        <div class="post-meta-bar">
+                            <span class="post-series-badge">
+                                <i class="fas fa-puzzle-piece me-1"></i>Commercial Analytics — Post 3
+                            </span>
+                            <span class="post-date"><i class="far fa-calendar-alt me-1"></i>April 2026</span>
+                        </div>
+
+                        <h2 class="post-title">
+                            Why <span class="gradient-text">Contextual Insights</span> Matter in Commercial Analytics
+                        </h2>
+
+                        <div class="post-tags">
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Contextual Insights</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Commercial Analytics</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Healthcare Data</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Decision Support</span>
+                        </div>
+
+                        <!-- Feature Image -->
+                        <!--<div class="post-feature-img pfi-teal">-->
+                        <!--    <div class="pfi-dec pfi-dec-1"></div>-->
+                        <!--    <div class="pfi-dec pfi-dec-2"></div>-->
+                        <!--    <div class="pfi-dec pfi-dec-3"></div>-->
+                        <!--    <div class="pfi-center">-->
+                        <!--        <div class="pfi-icon-bg"><i class="fas fa-brain"></i></div>-->
+                        <!--        <div class="pfi-label">Connected Intelligence &amp; Contextual Insight</div>-->
+                        <!--    </div>-->
+                        <!--    <span class="pfi-post-badge">Post 03</span>-->
+                        <!--</div>-->
+
+                        <div class="post-body">
+                            <p class="post-lead">
+                                Healthcare organizations are surrounded by data, but data alone rarely produces clarity. Claims data may show utilization patterns. Formulary data may show coverage changes. Hub data may show case movement. Prescription data may show drop-off points. Each source provides information, but none of them alone fully explains what is happening in the market.
+                            </p>
+
+                            <h3 class="post-section-heading">Fragmented Signals, Misleading Conclusions</h3>
+                            <p>
+                                Contextual insights are what connect fragmented signals into a coherent commercial view. They help explain why performance is changing, why a barrier matters, and why one part of the market behaves differently from another. Without context, organizations risk building conclusions on isolated signals rather than on the structure of the market itself.
+                            </p>
+                            <p>
+                                This challenge is common in healthcare commercial analytics because the market is shaped by multiple overlapping systems. Patient movement is influenced by clinical pathways, coverage conditions, reimbursement rules, provider behavior, operational workflow, geography, and channel dynamics. A data point may be technically accurate and still be misleading if it is interpreted without enough context.
+                            </p>
+
+                            <h3 class="post-section-heading">When the Data Lies — By Omission</h3>
+                            <p>
+                                A prescription decline in one region may appear to be a demand issue when it is actually an access issue. A slowdown in therapy initiation may look like patient hesitation when it is really a prior authorization bottleneck. A performance gap between providers may seem commercial on the surface but may actually reflect differences in hub adoption, office workflow, or site-of-care economics. In each case, the data needs context before it becomes useful.
+                            </p>
+                            <blockquote class="post-quote">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                Context is not an extra feature. It is the connective tissue that makes analytics matter. In a fragmented healthcare environment, it is what turns commercial analytics from a reporting exercise into a decision-support capability.
+                            </blockquote>
+
+                            <h3 class="post-section-heading">Where Primary Research Plays Its Role</h3>
+                            <p>
+                                This is where contextual insights become a real capability. They begin with an understanding of what internal data already exists and what each dataset can and cannot explain. They then selectively incorporate external datasets where those add value. Just as important, they bring in standards of care, primary research, operational understanding, and direct business feedback to interpret the data correctly.
+                            </p>
+                            <p>
+                                Primary research matters here, but in a different role than in classical market research. Its value is not only in generating standalone opinion. Its value is in helping build the interpretive framework around the data. It can explain provider choices, market variations, workflow barriers, and shifts in clinical or commercial behavior that numbers alone do not fully reveal.
+                            </p>
+
+                            <div class="post-callout">
+                                <div class="post-callout-icon"><i class="fas fa-link"></i></div>
+                                <div class="post-callout-text">
+                                    <strong>The result is not just more information. It is more usable information.</strong> Leaders see not just what changed, but why it changed, what it means, and what should happen next.
+                                </div>
+                            </div>
+
+                            <div class="post-perspective">
+                                <p class="post-perspective-label"><i class="fas fa-chart-line"></i> The Symetrique Perspective</p>
+                                <p class="post-perspective-text">At Symetrique, we believe contextual insight is what turns commercial analytics from a reporting exercise into a decision-support capability. It helps leaders see not just what changed, but why it changed, what it means, and what should happen next. In a fragmented healthcare environment, context is not an extra feature. It is the connective tissue that makes analytics matter.</p>
+                            </div>
+
+                            <div class="post-attribution">
+                                <i class="fas fa-pen-nib me-2"></i>
+                                <strong>Symetrique Commercial Analytics Team</strong>
+                            </div>
+                            <div class="post-hashtags">
+                                <span>#CommercialAnalytics</span><span>#ContextualInsights</span><span>#HealthcareData</span>
+                                <span>#DecisionSupport</span><span>#MarketAccess</span><span>#Symetrique</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div><!-- /col-lg-8 -->
+
+                <!-- ===== SIDEBAR ===== -->
+                <div class="col-lg-4">
+                    <div class="blog-sidebar">
+
+                        <!-- Search -->
+                        <div class="sidebar-widget glass-card animate-on-scroll">
+                            <h5 class="sidebar-widget-title"><i class="fas fa-search me-2"></i>Search</h5>
+                            <div class="sidebar-search">
+                                <input type="text" id="blogSearch" class="sidebar-search-input" placeholder="Search articles…" aria-label="Search">
+                                <button class="sidebar-search-btn" id="searchBtn" aria-label="Submit search">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                            <div id="searchResults" class="search-results" aria-live="polite"></div>
+                        </div>
+
+                        <!-- Articles in this category -->
+                        <div class="sidebar-widget glass-card animate-on-scroll">
+                            <h5 class="sidebar-widget-title"><i class="fas fa-layer-group me-2"></i>In This Category</h5>
+                            <p class="sidebar-series-desc">Three articles on building commercial analytics that goes beyond dashboards and drives real decisions in healthcare.</p>
+                            <ul class="sidebar-series-list">
+                                <li class="series-item active">
+                                    <a href="#ca-post-1">
+                                        <span class="series-clip-num">01</span>
+                                        <span class="series-clip-title">Analytics Beyond Reporting</span>
+                                        <i class="fas fa-check-circle series-check"></i>
+                                    </a>
+                                </li>
+                                <li class="series-item active">
+                                    <a href="#ca-post-2">
+                                        <span class="series-clip-num">02</span>
+                                        <span class="series-clip-title">Patient Services Analytics</span>
+                                        <i class="fas fa-check-circle series-check"></i>
+                                    </a>
+                                </li>
+                                <li class="series-item active">
+                                    <a href="#ca-post-3">
+                                        <span class="series-clip-num">03</span>
+                                        <span class="series-clip-title">Why Context Is the Connective Tissue</span>
+                                        <i class="fas fa-check-circle series-check"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Topics -->
+                        <div class="sidebar-widget glass-card animate-on-scroll">
+                            <h5 class="sidebar-widget-title"><i class="fas fa-tags me-2"></i>Topics</h5>
+                            <div class="sidebar-topics">
+                                <a href="#ca-post-1" class="topic-chip">Commercial Analytics</a>
+                                <a href="#ca-post-1" class="topic-chip">Market Access</a>
+                                <a href="#ca-post-2" class="topic-chip">Patient Services</a>
+                                <a href="#ca-post-2" class="topic-chip">Hub Analytics</a>
+                                <a href="#ca-post-2" class="topic-chip">Specialty Pharma</a>
+                                <a href="#ca-post-3" class="topic-chip">Contextual Insights</a>
+                                <a href="#ca-post-3" class="topic-chip">Decision Support</a>
+                                <a href="#ca-post-1" class="topic-chip">Healthcare Strategy</a>
+                            </div>
+                        </div>
+
+                        <!-- Newsletter -->
+                        <div class="sidebar-widget glass-card sidebar-newsletter animate-on-scroll">
+                            <div class="newsletter-glow"></div>
+                            <h5 class="sidebar-widget-title"><i class="fas fa-envelope me-2"></i>Stay Updated</h5>
+                            <p class="sidebar-newsletter-desc">Get new articles on commercial analytics and market access strategy delivered to your inbox.</p>
+                            <form class="sidebar-newsletter-form footer-newsletter">
+                                <input type="email" class="sidebar-newsletter-input" placeholder="Your email address" aria-label="Email for newsletter">
+                                <button type="submit" class="sidebar-newsletter-btn btn-primary">
+                                    <i class="fas fa-paper-plane me-2"></i>Subscribe
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- About Symetrique -->
+                        <div class="sidebar-widget glass-card animate-on-scroll">
+                            <h5 class="sidebar-widget-title"><i class="fas fa-dna me-2"></i>About Symetrique</h5>
+                            <div class="book-card">
+                                <div class="book-icon"><i class="fas fa-chart-bar" style="font-size:1.2rem"></i></div>
+                                <div class="book-info">
+                                    <p class="book-title">AI-driven Real World Evidence for pharma, physicians, and patients.</p>
+                                    <p class="book-author"><a href="https://www.thesymetrique.com" target="_blank" rel="noopener" style="color:inherit">www.thesymetrique.com</a></p>
+                                    <p class="book-endorsements">Madhav Kathikar, Founder &amp; CEO · 224-566-9880</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- /blog-sidebar -->
+                </div><!-- /col-lg-4 -->
+
+            </div><!-- /row -->
+        </div><!-- /container -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 footer-col">
+                        <div class="footer-brand">
+                            <img src="assets/Footer_logo.png" alt="Symetrique Logo" class="footer-logo">
+                            <p class="footer-tagline">Decision-Grade Evidence. Delivered.</p>
+                        </div>
+                        <p class="footer-description">Transforming real-world healthcare data into actionable evidence for payers, biopharma, and healthcare decision-makers.</p>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-col">
+                        <h5 class="footer-heading">Company</h5>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="blogs.html">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6 footer-col">
+                        <h5 class="footer-heading">Stay Updated</h5>
+                        <p class="footer-newsletter-text">Get insights on RWE, market access, and healthcare analytics.</p>
+                        <form class="footer-newsletter">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                                <button class="btn btn-primary" type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6"><p class="copyright">2026 Symetrique. All rights reserved.</p></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="nav-active.js"></script>
+    <script>
+        window.addEventListener('load', function () { const p = document.getElementById('preloader'); setTimeout(() => { p.classList.add('preloader-hidden'); setTimeout(() => { p.style.display = 'none'; }, 500); }, 1500); });
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        if (navbarToggler) navbarToggler.addEventListener('click', function () { this.classList.toggle('active'); });
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const logoImg = document.querySelector('.navbar-brand img');
+        const footerLogoImg = document.querySelector('.footer-brand img.footer-logo');
+        function applyLogos(theme) { if (logoImg) logoImg.src = theme === 'light' ? 'assets/logo-placeholder_Light.png' : 'assets/logo-placeholder.png'; if (footerLogoImg) footerLogoImg.src = theme === 'light' ? 'assets/Footer_logo_Light.png' : 'assets/Footer_logo.png'; }
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) { document.documentElement.setAttribute('data-theme', currentTheme); if (currentTheme === 'light' && toggleSwitch) toggleSwitch.checked = true; applyLogos(currentTheme); } else { applyLogos(document.documentElement.getAttribute('data-theme') || 'dark'); }
+        if (toggleSwitch) { toggleSwitch.addEventListener('change', function (e) { const t = e.target.checked ? 'light' : 'dark'; document.documentElement.setAttribute('data-theme', t); localStorage.setItem('theme', t); applyLogos(t); }); }
+        window.addEventListener('scroll', function () { document.querySelector('.navbar').classList.toggle('navbar-scrolled', window.scrollY > 50); });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('animate-visible'); }); }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        // Footer + sidebar newsletter
+        (function () {
+            const endpoint = 'https://formsubmit.co/ajax/madhav.kathikar@thesymetrique.com';
+            function showMsg(form, text, ok) { let m = form.querySelector('.newsletter-msg'); if (!m) { m = document.createElement('div'); m.className = 'newsletter-msg mt-2'; form.appendChild(m); } m.textContent = text; m.style.color = ok ? 'var(--primary)' : '#ff6b6b'; }
+            document.querySelectorAll('.footer-newsletter').forEach(form => { form.addEventListener('submit', function (e) { e.preventDefault(); const input = form.querySelector('input[type="email"]'); const btn = form.querySelector('button[type="submit"]'); const email = input && input.value.trim(); if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showMsg(form, 'Please enter a valid email address.', false); return; } btn.disabled = true; btn.textContent = 'Subscribing…'; fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ email, _subject: 'Newsletter Signup' }) }).then(r => r.json()).then(() => { showMsg(form, 'Thanks — you are subscribed!', true); input.value = ''; }).catch(() => showMsg(form, 'Subscription failed. Please try again later.', false)).finally(() => { btn.disabled = false; btn.textContent = 'Subscribe'; }); }); });
+        })();
+
+        // Sidebar newsletter
+        (function () {
+            const endpoint = 'https://formsubmit.co/ajax/madhav.kathikar@thesymetrique.com';
+            const form = document.querySelector('.sidebar-newsletter-form');
+            if (!form) return;
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const input = form.querySelector('input[type="email"]');
+                const btn = form.querySelector('button[type="submit"]');
+                const email = input && input.value.trim();
+                if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showSMsg('Please enter a valid email.', false); return; }
+                btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Subscribing…';
+                fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ email, _subject: 'Blog Newsletter Signup' }) })
+                    .then(() => { showSMsg('You are subscribed!', true); input.value = ''; })
+                    .catch(() => showSMsg('Please try again later.', false))
+                    .finally(() => { btn.disabled = false; btn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Subscribe'; });
+                function showSMsg(text, ok) { let m = form.querySelector('.newsletter-msg'); if (!m) { m = document.createElement('div'); m.className = 'newsletter-msg mt-2'; form.appendChild(m); } m.textContent = text; m.style.color = ok ? '#0ea5e9' : '#ff6b6b'; }
+            });
+        })();
+
+        // Search
+        (function () {
+            const posts = [
+                { id: 'ca-post-1', title: 'Why Commercial Analytics in Healthcare Has to Be More Than Reporting', tags: ['Commercial Analytics', 'Market Access', 'Healthcare Strategy', 'Decision Support', 'Reporting', 'Dashboards'] },
+                { id: 'ca-post-2', title: 'Patient Services Analytics: The Missing Link Between Support Programs and Commercial Performance', tags: ['Patient Services', 'Hub Analytics', 'Market Access', 'Specialty Pharma', 'Prior Authorization', 'Patient Journey'] },
+                { id: 'ca-post-3', title: 'Why Contextual Insights Matter in Commercial Analytics', tags: ['Contextual Insights', 'Commercial Analytics', 'Healthcare Data', 'Decision Support', 'Context', 'Fragmented Data'] }
+            ];
+            const input = document.getElementById('blogSearch');
+            const btn = document.getElementById('searchBtn');
+            const resultsEl = document.getElementById('searchResults');
+            function doSearch() {
+                const q = input.value.trim().toLowerCase(); resultsEl.innerHTML = ''; if (!q) return;
+                const matches = posts.filter(p => p.title.toLowerCase().includes(q) || p.tags.some(t => t.toLowerCase().includes(q)));
+                if (!matches.length) { resultsEl.innerHTML = '<p class="search-no-results">No posts found for "<em>' + q + '</em>".</p>'; return; }
+                matches.forEach(p => { const a = document.createElement('a'); a.href = '#' + p.id; a.className = 'search-result-item'; a.innerHTML = '<i class="fas fa-file-alt me-2"></i>' + p.title; a.addEventListener('click', () => { resultsEl.innerHTML = ''; input.value = ''; }); resultsEl.appendChild(a); });
+            }
+            btn.addEventListener('click', doSearch);
+            input.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+            input.addEventListener('input', doSearch);
+        })();
+    </script>
+</body>
+</html>

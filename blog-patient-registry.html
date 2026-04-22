@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registry Blog | Symetrique</title>
+    <meta name="description" content="Why registries must be built around patients, how information asymmetry drives the trial access gap, and why context connects registry data to real-world evidence." />
+    <meta name="keywords" content="Patient Registry, Trial Access, Real-World Evidence, RWE, Registry Design, Information Asymmetry, Symetrique" />
+    <meta name="author" content="Symetrique" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="icon" type="image/png" href="assets/logo-placeholder.png" />
+    <link rel="shortcut icon" type="image/png" href="assets/logo-placeholder.png" />
+    <link rel="apple-touch-icon" href="assets/logo-placeholder.png" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="blog.css">
+
+    <style>
+        /* ── Patient Registry accent — emerald ── */
+        .post-series-badge {
+            background: rgba(16,185,129,0.12);
+            border: 1px solid rgba(16,185,129,0.25);
+            color: #10b981;
+        }
+        .blog-back-link { color: rgba(16,185,129,0.8); }
+        .blog-back-link:hover { color: #10b981; }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <svg viewBox="0 0 100 100" class="preloader-circle">
+                    <circle cx="50" cy="50" r="45" class="circle-bg"/>
+                    <circle cx="50" cy="50" r="45" class="circle-progress"/>
+                </svg>
+                <div class="preloader-icon"><i class="fas fa-clipboard-list"></i></div>
+            </div>
+            <div class="preloader-text">
+                <span class="preloader-brand">Symetrique</span>
+                <span class="preloader-tagline">Decision-Grade Evidence</span>
+            </div>
+            <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/logo-placeholder.png" alt="Symetrique Logo" class="img-fluid navbar-logo">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger-icon"><span></span><span></span><span></span></div>
+            </button>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"><i class="fas fa-sun"></i><i class="fas fa-moon"></i></div>
+                </label>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end mt-3 mt-lg-0" id="navbarNav">
+                <div class="nav-menu-container">
+                    <ul class="nav-menu d-flex flex-column flex-lg-row bg-secondary rounded-pill px-2 py-1">
+                        <li class="nav-item"><a class="nav-link rounded-pill px-4 fs-6 fw-light" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link rounded-pill px-4 fs-6 fw-light" href="commercial_analytics.html">Commercial Analytics</a></li>
+                        <li class="nav-item"><a class="nav-link rounded-pill px-4 fs-6 fw-light" href="market_research.html">Market Research</a></li>
+                        <li class="nav-item"><a class="nav-link rounded-pill px-4 fs-6 fw-light" href="patient-registry-services.html">Patient Registry</a></li>
+                        <li class="nav-item"><a class="nav-link rounded-pill px-4 fs-6 fw-light" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link active rounded-pill px-4 fs-6 fw-light" href="blogs.html">Blogs</a></li>
+                        <li class="nav-item"><a class="nav-link cta-nav rounded-pill px-4 fs-6 fw-medium" href="about.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="blog-hero">
+        <div class="blog-hero-particles"></div>
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 animate-fade-in-up">
+                    <a href="blogs.html" class="blog-back-link mb-4 d-inline-flex align-items-center gap-2">
+                        <i class="fas fa-arrow-left"></i> All Blogs
+                    </a>
+                    <span class="section-badge mb-3 d-inline-block">
+                        <i class="fas fa-clipboard-list me-2"></i>Patient Registries &amp; Trial Access
+                    </span>
+                    <h1 class="blog-hero-title">
+                        Registry &amp; Trial Access <span class="gradient-text">Intelligence</span>
+                    </h1>
+                    <p class="blog-hero-subtitle">
+                        Patient-centered registry design, the information asymmetry behind trial access gaps, and why context is the connective tissue that turns registry data into durable strategic intelligence.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="blog-hero-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+                <path fill="var(--bg-primary, #0a0f1a)" fill-opacity="1"
+                    d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-content-section">
+        <div class="container">
+            <div class="row g-4 g-lg-5">
+
+                <!-- ===== POSTS ===== -->
+                <div class="col-lg-8">
+
+                    <!-- ─── POST 1 ─── -->
+                    <article class="blog-post glass-card animate-on-scroll" id="pr-post-1">
+                        <div class="post-meta-bar">
+                            <span class="post-series-badge">
+                                <i class="fas fa-clipboard-list me-1"></i>Patient Registries &amp; Trial Access — Post 1
+                            </span>
+                            <span class="post-date"><i class="far fa-calendar-alt me-1"></i>April 2026</span>
+                        </div>
+
+                        <h2 class="post-title">
+                            Why Patient Registries Need to Be Designed Around <span class="gradient-text">Patients</span>, Not Just Studies
+                        </h2>
+
+                        <div class="post-tags">
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Patient Registries</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Patient-Centered Design</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Real-World Evidence</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Longitudinal Evidence</span>
+                        </div>
+
+                        <div class="post-body">
+                            <p class="post-lead">
+                                Patient registries are often built as study vehicles first and patient experiences second. That design choice limits both enrollment and long-term value.
+                            </p>
+
+                            <h3 class="post-section-heading">When a Registry Is Built for the Protocol</h3>
+                            <p>
+                                When a registry is created only to satisfy a protocol, it tends to optimize around sponsor workflow, form completion, and short-term study milestones. Patients may still participate, but the experience rarely feels designed for them. That usually affects retention, completeness, and the quality of longitudinal insight.
+                            </p>
+
+                            <h3 class="post-section-heading">A Different Starting Premise</h3>
+                            <p>
+                                A patient-centered registry starts from a different premise: the patient is not just a source of data; the patient is a participant whose ongoing engagement determines the strength of the evidence asset. That shifts the design questions. What value does the patient receive? How clear is the consent experience? How easily can the patient see or contribute information over time? How does the registry fit into the real care journey rather than standing apart from it?
+                            </p>
+                            <blockquote class="post-quote">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                Longitudinal evidence depends on longitudinal trust. Registries that are easier to understand, easier to use, and more aligned with patient needs are more likely to sustain participation and data quality over time.
+                            </blockquote>
+
+                            <h3 class="post-section-heading">The Strategic Upside</h3>
+                            <p>
+                                This matters because longitudinal evidence depends on longitudinal trust. Registries that are easier to understand, easier to use, and more aligned with patient needs are more likely to sustain participation and data quality over time.
+                            </p>
+                            <p>
+                                For healthcare organizations, the upside is not only ethical. It is strategic. A better patient experience can translate into faster enrollment, lower dropout, richer primary data, and a more durable data asset. The result is a registry that serves Medical Affairs, HEOR, Clinical Operations, and future evidence questions more effectively.
+                            </p>
+
+                            <div class="post-callout post-callout-teal">
+                                <div class="post-callout-icon"><i class="fas fa-user-circle"></i></div>
+                                <div class="post-callout-text">
+                                    <strong>The most valuable registries are built around the patient journey first.</strong> That is what creates a stronger foundation for both evidence generation and trial access.
+                                </div>
+                            </div>
+
+                            <div class="post-perspective">
+                                <p class="post-perspective-label"><i class="fas fa-chart-line"></i> The Symetrique Perspective</p>
+                                <p class="post-perspective-text">At Symetrique, we believe the most valuable registries are built around the patient journey first. That is what creates a stronger foundation for both evidence and trial access.</p>
+                            </div>
+
+                            <div class="post-attribution">
+                                <i class="fas fa-pen-nib me-2"></i>
+                                <strong>Symetrique Patient Registry Team</strong>
+                            </div>
+                            <div class="post-hashtags">
+                                <span>#PatientRegistries</span><span>#PatientCentered</span><span>#RealWorldEvidence</span>
+                                <span>#LongitudinalData</span><span>#Symetrique</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="post-divider"><span><i class="fas fa-circle-dot"></i></span></div>
+
+                    <!-- ─── POST 2 ─── -->
+                    <article class="blog-post glass-card animate-on-scroll" id="pr-post-2">
+                        <div class="post-meta-bar">
+                            <span class="post-series-badge">
+                                <i class="fas fa-route me-1"></i>Patient Registries &amp; Trial Access — Post 2
+                            </span>
+                            <span class="post-date"><i class="far fa-calendar-alt me-1"></i>April 2026</span>
+                        </div>
+
+                        <h2 class="post-title">
+                            The Trial Access Problem Is Also an <span class="gradient-text">Information Asymmetry</span> Problem
+                        </h2>
+
+                        <div class="post-tags">
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Trial Access</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Clinical Trials</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Information Asymmetry</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Patient Advocacy</span>
+                        </div>
+
+                        <div class="post-body">
+                            <p class="post-lead">
+                                When people talk about trial recruitment, the conversation often starts from the sponsor side: how do we find the right patients faster? That is a real problem, but it is not the whole problem.
+                            </p>
+
+                            <h3 class="post-section-heading">The Other Side of the Problem</h3>
+                            <p>
+                                The other side of the issue is information asymmetry. Many patients cannot find relevant trials, and many community physicians cannot easily guide patients toward those opportunities either. The information exists, but it is fragmented, difficult to interpret, or locked inside systems that were not designed for patient- or physician-centered navigation.
+                            </p>
+
+                            <h3 class="post-section-heading">The Community Setting Gap</h3>
+                            <p>
+                                This matters because most patients are not cared for in academic medical centers. They are seen in community settings, where trial visibility can be much weaker. Even when trial lists are technically public, that does not mean they are usable. Eligibility criteria are difficult to interpret, site relevance is unclear, and neither patients nor physicians are usually given practical tools to understand whether a match is realistic.
+                            </p>
+                            <blockquote class="post-quote">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                A better approach is to treat trial access as an intelligence problem, not just a sourcing problem. That means structuring trial metadata, translating eligibility logic, and combining patient context with a clear view of geography, care setting, and clinical reality.
+                            </blockquote>
+
+                            <h3 class="post-section-heading">Registries as Access Layers</h3>
+                            <p>
+                                A better approach is to treat trial access as an intelligence problem, not just a sourcing problem. That means structuring trial metadata, translating eligibility logic, and combining patient context with a clear view of geography, care setting, and clinical reality.
+                            </p>
+                            <p>
+                                This is where patient registries become strategically important. A well-designed registry can serve not only as an evidence platform, but also as an access layer that helps surface trial opportunities to the people who need them most.
+                            </p>
+
+                            <div class="post-callout post-callout-teal">
+                                <div class="post-callout-icon"><i class="fas fa-exchange-alt"></i></div>
+                                <div class="post-callout-text">
+                                    <strong>Sponsors will still need to find patients. But patients and physicians should also be able to find relevant trials</strong> with far less friction. That requires a stronger patient- and physician-facing intelligence layer.
+                                </div>
+                            </div>
+
+                            <div class="post-perspective">
+                                <p class="post-perspective-label"><i class="fas fa-chart-line"></i> The Symetrique Perspective</p>
+                                <p class="post-perspective-text">At Symetrique, we believe the future of trial access includes a stronger patient- and physician-facing intelligence layer. Sponsors will still need to find patients. But patients and physicians should also be able to find relevant trials with far less friction.</p>
+                            </div>
+
+                            <div class="post-attribution">
+                                <i class="fas fa-pen-nib me-2"></i>
+                                <strong>Symetrique Patient Registry Team</strong>
+                            </div>
+                            <div class="post-hashtags">
+                                <span>#TrialAccess</span><span>#ClinicalTrials</span><span>#InformationAsymmetry</span>
+                                <span>#PatientAdvocacy</span><span>#RegistryData</span><span>#Symetrique</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="post-divider"><span><i class="fas fa-circle-dot"></i></span></div>
+
+                    <!-- ─── POST 3 ─── -->
+                    <article class="blog-post glass-card animate-on-scroll" id="pr-post-3">
+                        <div class="post-meta-bar">
+                            <span class="post-series-badge">
+                                <i class="fas fa-puzzle-piece me-1"></i>Patient Registries &amp; Trial Access — Post 3
+                            </span>
+                            <span class="post-date"><i class="far fa-calendar-alt me-1"></i>April 2026</span>
+                        </div>
+
+                        <h2 class="post-title">
+                            Context Is the <span class="gradient-text">Glue</span> Between Registry Data, Trial Access, and Real-World Evidence
+                        </h2>
+
+                        <div class="post-tags">
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Registry Data</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Real-World Evidence</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Contextual Insights</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Primary Research</span>
+                        </div>
+
+                        <div class="post-body">
+                            <p class="post-lead">
+                                In registry work, it is easy to focus on the data fields and lose sight of the context that makes them meaningful.
+                            </p>
+
+                            <h3 class="post-section-heading">Disconnected Pieces</h3>
+                            <p>
+                                A registry may contain patient-reported outcomes, EHR-linked data, care history, symptom patterns, and longitudinal follow-up. Trial protocols may contain inclusion and exclusion criteria. Publications may describe standards of care. Advocacy groups may offer a lived view of the patient journey. Each source adds something important. But without context, these pieces remain disconnected.
+                            </p>
+
+                            <h3 class="post-section-heading">Context Turns Data Into an Intelligence Asset</h3>
+                            <p>
+                                Context is what turns a registry from a data collection exercise into an intelligence asset. It explains why patients move the way they do, why some sites enroll and others do not, why community physicians may miss opportunities, and why protocol logic may look reasonable on paper but difficult in the real world.
+                            </p>
+                            <blockquote class="post-quote">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                When the structure is strong, the registry becomes much more useful for evidence generation, trial navigation, and future decision-making. Context is not an optional layer — it is the foundation.
+                            </blockquote>
+
+                            <h3 class="post-section-heading">Where Primary Research Plays Its Role</h3>
+                            <p>
+                                Primary research plays a critical role here. Interviews with physicians, trial operators, advocacy leaders, and patients can reveal where workflow barriers exist, where criteria are interpreted inconsistently, and where the patient experience breaks down. That contextual layer helps structure the questions the registry should answer and the logic the trial-access tools should use.
+                            </p>
+
+                            <h3 class="post-section-heading">Structure + Data = Coherent Picture</h3>
+                            <p>
+                                The result is a stronger model: context creates the structure, and data provides the realistic outcomes. When the structure is weak, the data can still be technically correct while leading to shallow or misleading conclusions. When the structure is strong, the registry becomes much more useful for evidence generation, trial navigation, and future decision-making.
+                            </p>
+
+                            <div class="post-callout">
+                                <div class="post-callout-icon"><i class="fas fa-link"></i></div>
+                                <div class="post-callout-text">
+                                    <strong>Context is the glue that connects disparate sources into a coherent picture</strong> of patients, care, and opportunity — and it is what turns a registry from a data exercise into a durable strategic asset.
+                                </div>
+                            </div>
+
+                            <div class="post-perspective">
+                                <p class="post-perspective-label"><i class="fas fa-chart-line"></i> The Symetrique Perspective</p>
+                                <p class="post-perspective-text">At Symetrique, we view contextual insight as essential to registry design. It is the glue that connects disparate sources into a coherent picture of patients, care, and opportunity.</p>
+                            </div>
+
+                            <div class="post-attribution">
+                                <i class="fas fa-pen-nib me-2"></i>
+                                <strong>Symetrique Patient Registry Team</strong>
+                            </div>
+                            <div class="post-hashtags">
+                                <span>#RegistryData</span><span>#RealWorldEvidence</span><span>#ContextualInsights</span>
+                                <span>#PrimaryResearch</span><span>#TrialAccess</span><span>#Symetrique</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div><!-- /col-lg-8 -->
+
+                <!-- ===== SIDEBAR ===== -->
+                <div class="col-lg-4">
+                    <div class="blog-sidebar">
+
+                        <!-- Search -->
+                        <div class="sidebar-widget glass-card animate-on-scroll">
+                            <h5 class="sidebar-widget-title"><i class="fas fa-search me-2"></i>Search</h5>
+                            <div class="sidebar-search">
+                                <input type="text" id="blogSearch" class="sidebar-search-input" placeholder="Search articles…" aria-label="Search">
+                                <button class="sidebar-search-btn" id="searchBtn" aria-label="Submit search">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                            <div id="searchResults" class="search-results" aria-live="polite"></div>
+                        </div>
+
+                        <!-- Articles in this category -->
+                        <div class="sidebar-widget glass-card animate-on-scroll">
+                            <h5 class="sidebar-widget-title"><i class="fas fa-layer-group me-2"></i>In This Category</h5>
+                            <p class="sidebar-series-desc">Three articles on patient-centered registry design, trial access intelligence, and the contextual insight that makes registry data actionable.</p>
+                            <ul class="sidebar-series-list">
+                                <li class="series-item active">
+                                    <a href="#pr-post-1">
+                                        <span class="series-clip-num">01</span>
+                                        <span class="series-clip-title">Registries Designed Around Patients</span>
+                                        <i class="fas fa-check-circle series-check"></i>
+                                    </a>
+                                </li>
+                                <li class="series-item active">
+                                    <a href="#pr-post-2">
+                                        <span class="series-clip-num">02</span>
+                                        <span class="series-clip-title">Trial Access &amp; Information Asymmetry</span>
+                                        <i class="fas fa-check-circle series-check"></i>
+                                    </a>
+                                </li>
+                                <li class="series-item active">
+                                    <a href="#pr-post-3">
+                                        <span class="series-clip-num">03</span>
+                                        <span class="series-clip-title">Context: The Glue of Registry Intelligence</span>
+                                        <i class="fas fa-check-circle series-check"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Topics -->
+                        <div class="sidebar-widget glass-card animate-on-scroll">
+                            <h5 class="sidebar-widget-title"><i class="fas fa-tags me-2"></i>Topics</h5>
+                            <div class="sidebar-topics">
+                                <a href="#pr-post-1" class="topic-chip">Patient Registries</a>
+                                <a href="#pr-post-1" class="topic-chip">Patient-Centered Design</a>
+                                <a href="#pr-post-1" class="topic-chip">Longitudinal Evidence</a>
+                                <a href="#pr-post-2" class="topic-chip">Trial Access</a>
+                                <a href="#pr-post-2" class="topic-chip">Clinical Trials</a>
+                                <a href="#pr-post-2" class="topic-chip">Patient Advocacy</a>
+                                <a href="#pr-post-3" class="topic-chip">Contextual Insights</a>
+                                <a href="#pr-post-3" class="topic-chip">Real-World Evidence</a>
+                                <a href="#pr-post-3" class="topic-chip">Primary Research</a>
+                            </div>
+                        </div>
+
+                        <!-- Newsletter -->
+                        <div class="sidebar-widget glass-card sidebar-newsletter animate-on-scroll">
+                            <div class="newsletter-glow"></div>
+                            <h5 class="sidebar-widget-title"><i class="fas fa-envelope me-2"></i>Stay Updated</h5>
+                            <p class="sidebar-newsletter-desc">Get new articles on patient registries, trial access intelligence, and real-world evidence delivered to your inbox.</p>
+                            <form class="sidebar-newsletter-form footer-newsletter">
+                                <input type="email" class="sidebar-newsletter-input" placeholder="Your email address" aria-label="Email for newsletter">
+                                <button type="submit" class="sidebar-newsletter-btn btn-primary">
+                                    <i class="fas fa-paper-plane me-2"></i>Subscribe
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- About Symetrique -->
+                        <div class="sidebar-widget glass-card animate-on-scroll">
+                            <h5 class="sidebar-widget-title"><i class="fas fa-dna me-2"></i>About Symetrique</h5>
+                            <div class="book-card">
+                                <div class="book-icon"><i class="fas fa-clipboard-list" style="font-size:1.2rem"></i></div>
+                                <div class="book-info">
+                                    <p class="book-title">AI-driven Real World Evidence for pharma, physicians, and patients.</p>
+                                    <p class="book-author"><a href="https://www.thesymetrique.com" target="_blank" rel="noopener" style="color:inherit">www.thesymetrique.com</a></p>
+                                    <p class="book-endorsements">Madhav Kathikar, Founder &amp; CEO · 224-566-9880</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- /blog-sidebar -->
+                </div><!-- /col-lg-4 -->
+
+            </div><!-- /row -->
+        </div><!-- /container -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 footer-col">
+                        <div class="footer-brand">
+                            <img src="assets/Footer_logo.png" alt="Symetrique Logo" class="footer-logo">
+                            <p class="footer-tagline">Decision-Grade Evidence. Delivered.</p>
+                        </div>
+                        <p class="footer-description">Transforming real-world healthcare data into actionable evidence for payers, biopharma, and healthcare decision-makers.</p>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-col">
+                        <h5 class="footer-heading">Company</h5>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="blogs.html">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6 footer-col">
+                        <h5 class="footer-heading">Stay Updated</h5>
+                        <p class="footer-newsletter-text">Get insights on RWE, market access, and healthcare analytics.</p>
+                        <form class="footer-newsletter">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                                <button class="btn btn-primary" type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6"><p class="copyright">2026 Symetrique. All rights reserved.</p></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="nav-active.js"></script>
+    <script>
+        window.addEventListener('load', function () { const p = document.getElementById('preloader'); setTimeout(() => { p.classList.add('preloader-hidden'); setTimeout(() => { p.style.display = 'none'; }, 500); }, 1500); });
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        if (navbarToggler) navbarToggler.addEventListener('click', function () { this.classList.toggle('active'); });
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const logoImg = document.querySelector('.navbar-brand img');
+        const footerLogoImg = document.querySelector('.footer-brand img.footer-logo');
+        function applyLogos(theme) { if (logoImg) logoImg.src = theme === 'light' ? 'assets/logo-placeholder_Light.png' : 'assets/logo-placeholder.png'; if (footerLogoImg) footerLogoImg.src = theme === 'light' ? 'assets/Footer_logo_Light.png' : 'assets/Footer_logo.png'; }
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) { document.documentElement.setAttribute('data-theme', currentTheme); if (currentTheme === 'light' && toggleSwitch) toggleSwitch.checked = true; applyLogos(currentTheme); } else { applyLogos(document.documentElement.getAttribute('data-theme') || 'dark'); }
+        if (toggleSwitch) { toggleSwitch.addEventListener('change', function (e) { const t = e.target.checked ? 'light' : 'dark'; document.documentElement.setAttribute('data-theme', t); localStorage.setItem('theme', t); applyLogos(t); }); }
+        window.addEventListener('scroll', function () { document.querySelector('.navbar').classList.toggle('navbar-scrolled', window.scrollY > 50); });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('animate-visible'); }); }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        // Footer newsletter
+        (function () {
+            const endpoint = 'https://formsubmit.co/ajax/madhav.kathikar@thesymetrique.com';
+            function showMsg(form, text, ok) { let m = form.querySelector('.newsletter-msg'); if (!m) { m = document.createElement('div'); m.className = 'newsletter-msg mt-2'; form.appendChild(m); } m.textContent = text; m.style.color = ok ? 'var(--primary)' : '#ff6b6b'; }
+            document.querySelectorAll('.footer-newsletter').forEach(form => { form.addEventListener('submit', function (e) { e.preventDefault(); const input = form.querySelector('input[type="email"]'); const btn = form.querySelector('button[type="submit"]'); const email = input && input.value.trim(); if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showMsg(form, 'Please enter a valid email address.', false); return; } btn.disabled = true; btn.textContent = 'Subscribing…'; fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ email, _subject: 'Newsletter Signup' }) }).then(r => r.json()).then(() => { showMsg(form, 'Thanks — you are subscribed!', true); input.value = ''; }).catch(() => showMsg(form, 'Subscription failed. Please try again later.', false)).finally(() => { btn.disabled = false; btn.textContent = 'Subscribe'; }); }); });
+        })();
+
+        // Sidebar newsletter
+        (function () {
+            const endpoint = 'https://formsubmit.co/ajax/madhav.kathikar@thesymetrique.com';
+            const form = document.querySelector('.sidebar-newsletter-form');
+            if (!form) return;
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const input = form.querySelector('input[type="email"]');
+                const btn = form.querySelector('button[type="submit"]');
+                const email = input && input.value.trim();
+                if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showSMsg('Please enter a valid email.', false); return; }
+                btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Subscribing…';
+                fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ email, _subject: 'Blog Newsletter Signup' }) })
+                    .then(() => { showSMsg('You are subscribed!', true); input.value = ''; })
+                    .catch(() => showSMsg('Please try again later.', false))
+                    .finally(() => { btn.disabled = false; btn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Subscribe'; });
+                function showSMsg(text, ok) { let m = form.querySelector('.newsletter-msg'); if (!m) { m = document.createElement('div'); m.className = 'newsletter-msg mt-2'; form.appendChild(m); } m.textContent = text; m.style.color = ok ? '#10b981' : '#ff6b6b'; }
+            });
+        })();
+
+        // Search
+        (function () {
+            const posts = [
+                { id: 'pr-post-1', title: 'Why Patient Registries Need to Be Designed Around Patients, Not Just Studies', tags: ['Patient Registries', 'Patient-Centered Design', 'Real-World Evidence', 'Longitudinal Evidence', 'Enrollment', 'Retention'] },
+                { id: 'pr-post-2', title: 'The Trial Access Problem Is Also an Information Asymmetry Problem', tags: ['Trial Access', 'Clinical Trials', 'Information Asymmetry', 'Patient Advocacy', 'Community Physicians', 'Eligibility'] },
+                { id: 'pr-post-3', title: 'Context Is the Glue Between Registry Data, Trial Access, and Real-World Evidence', tags: ['Registry Data', 'Real-World Evidence', 'Contextual Insights', 'Primary Research', 'Trial Navigation', 'Evidence Generation'] }
+            ];
+            const input = document.getElementById('blogSearch');
+            const btn = document.getElementById('searchBtn');
+            const resultsEl = document.getElementById('searchResults');
+            function doSearch() {
+                const q = input.value.trim().toLowerCase(); resultsEl.innerHTML = ''; if (!q) return;
+                const matches = posts.filter(p => p.title.toLowerCase().includes(q) || p.tags.some(t => t.toLowerCase().includes(q)));
+                if (!matches.length) { resultsEl.innerHTML = '<p class="search-no-results">No posts found for "<em>' + q + '</em>".</p>'; return; }
+                matches.forEach(p => { const a = document.createElement('a'); a.href = '#' + p.id; a.className = 'search-result-item'; a.innerHTML = '<i class="fas fa-file-alt me-2"></i>' + p.title; a.addEventListener('click', () => { resultsEl.innerHTML = ''; input.value = ''; }); resultsEl.appendChild(a); });
+            }
+            btn.addEventListener('click', doSearch);
+            input.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+            input.addEventListener('input', doSearch);
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Research Intelligence Blog | Symetrique</title>
+    <meta name="description" content="Why small-sample research fails in healthcare, how to size markets with real-world data, and why context is the organizing layer of market intelligence." />
+    <meta name="keywords" content="Market Research, Healthcare Market Sizing, Real-World Data, HTA Intelligence, Market Intelligence, Symetrique" />
+    <meta name="author" content="Symetrique" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="icon" type="image/png" href="assets/logo-placeholder.png" />
+    <link rel="shortcut icon" type="image/png" href="assets/logo-placeholder.png" />
+    <link rel="apple-touch-icon" href="assets/logo-placeholder.png" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="blog.css">
+
+    <style>
+        /* ── Post feature image banner (teal — matches Healthcare IT theme) ── */
+        .post-feature-img {
+            width: 100%;
+            border-radius: var(--blog-radius-sm);
+            margin-bottom: 36px;
+            min-height: 210px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--blog-glass-border);
+        }
+        .pfi-dec { position: absolute; border-radius: 50%; pointer-events: none; }
+        .pfi-center { display: flex; flex-direction: column; align-items: center; gap: 14px; position: relative; z-index: 2; text-align: center; padding: 32px; }
+        .pfi-icon-bg { width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.1rem; }
+        .pfi-label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+        .pfi-post-badge { position: absolute; top: 16px; right: 20px; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; padding: 4px 12px; border-radius: 50px; }
+        .pfi-teal { background: linear-gradient(135deg, rgba(7,155,126,0.1) 0%, rgba(6,125,102,0.05) 100%); }
+        .pfi-teal .pfi-dec-1 { width: 240px; height: 240px; top: -90px; right: -70px; background: radial-gradient(circle, rgba(7,155,126,0.22) 0%, transparent 65%); }
+        .pfi-teal .pfi-dec-2 { width: 160px; height: 160px; bottom: -60px; left: -50px; background: radial-gradient(circle, rgba(20,184,166,0.16) 0%, transparent 65%); }
+        .pfi-teal .pfi-dec-3 { width: 80px; height: 80px; top: 20px; left: 30%; background: radial-gradient(circle, rgba(7,155,126,0.12) 0%, transparent 70%); }
+        .pfi-teal .pfi-icon-bg { background: rgba(7,155,126,0.18); border: 1px solid rgba(7,155,126,0.35); color: #079b7e; }
+        .pfi-teal .pfi-label { color: rgba(7,155,126,0.75); }
+        .pfi-teal .pfi-post-badge { background: rgba(7,155,126,0.12); border: 1px solid rgba(7,155,126,0.25); color: #079b7e; }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <svg viewBox="0 0 100 100" class="preloader-circle">
+                    <circle cx="50" cy="50" r="45" class="circle-bg"/>
+                    <circle cx="50" cy="50" r="45" class="circle-progress"/>
+                </svg>
+                <div class="preloader-icon"><i class="fas fa-search-dollar"></i></div>
+            </div>
+            <div class="preloader-text">
+                <span class="preloader-brand">Symetrique</span>
+                <span class="preloader-tagline">Decision-Grade Evidence</span>
+            </div>
+            <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/logo-placeholder.png" alt="Symetrique Logo" class="img-fluid navbar-logo">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger-icon"><span></span><span></span><span></span></div>
+            </button>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"><i class="fas fa-sun"></i><i class="fas fa-moon"></i></div>
+                </label>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end mt-3 mt-lg-0" id="navbarNav">
+                <div class="nav-menu-container">
+                    <ul class="nav-menu d-flex flex-column flex-lg-row bg-secondary rounded-pill px-2 py-1">
+                        <li class="nav-item"><a class="nav-link rounded-pill px-4 fs-6 fw-light" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link rounded-pill px-4 fs-6 fw-light" href="commercial_analytics.html">Commercial Analytics</a></li>
+                        <li class="nav-item"><a class="nav-link rounded-pill px-4 fs-6 fw-light" href="market_research.html">Market Research</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-4 fs-6 fw-light" href="patient-registry-services.html">Patient Registry</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link rounded-pill px-4 fs-6 fw-light" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link active rounded-pill px-4 fs-6 fw-light" href="blogs.html">Blogs</a></li>
+                        <li class="nav-item"><a class="nav-link cta-nav rounded-pill px-4 fs-6 fw-medium" href="about.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="blog-hero">
+        <div class="blog-hero-particles"></div>
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 animate-fade-in-up">
+                    <a href="blogs.html" class="blog-back-link mb-4 d-inline-flex align-items-center gap-2">
+                        <i class="fas fa-arrow-left"></i> All Blogs
+                    </a>
+                    <span class="section-badge mb-3 d-inline-block">
+                        <i class="fas fa-search-dollar me-2"></i>Market Research Intelligence
+                    </span>
+                    <h1 class="blog-hero-title">
+                        Market Research <span class="gradient-text">Intelligence</span>
+                    </h1>
+                    <p class="blog-hero-subtitle">
+                        From small-sample limitations to real-world data frameworks — building market intelligence that holds up under strategic scrutiny.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="blog-hero-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+                <path fill="var(--bg-primary, #0a0f1a)" fill-opacity="1"
+                    d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-content-section">
+        <div class="container">
+            <div class="row g-4 g-lg-5">
+
+                <!-- ===== POSTS ===== -->
+                <div class="col-lg-8">
+
+                    <!-- ─── POST 1 ─── -->
+                    <article class="blog-post glass-card animate-on-scroll" id="mr-post-1">
+                        <div class="post-meta-bar">
+                            <span class="post-series-badge">
+                                <i class="fas fa-chart-pie me-1"></i>Market Research Intelligence — Post 1
+                            </span>
+                            <span class="post-date"><i class="far fa-calendar-alt me-1"></i>April 2026</span>
+                        </div>
+
+                        <h2 class="post-title">
+                            Why <span class="gradient-text">Small-Sample Market Research</span> Falls Short in Healthcare
+                        </h2>
+
+                        <div class="post-tags">
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Market Research</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Market Sizing</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Primary Research</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Healthcare Analytics</span>
+                        </div>
+
+                        <!-- Feature Image -->
+                        <!--<div class="post-feature-img pfi-teal">-->
+                        <!--    <div class="pfi-dec pfi-dec-1"></div>-->
+                        <!--    <div class="pfi-dec pfi-dec-2"></div>-->
+                        <!--    <div class="pfi-dec pfi-dec-3"></div>-->
+                        <!--    <div class="pfi-center">-->
+                        <!--        <div class="pfi-icon-bg"><i class="fas fa-chart-pie"></i></div>-->
+                        <!--        <div class="pfi-label">Research Quality &amp; Market Structure</div>-->
+                        <!--    </div>-->
+                        <!--    <span class="pfi-post-badge">Post 01</span>-->
+                        <!--</div>-->
+
+                        <div class="post-body">
+                            <p class="post-lead">
+                                Healthcare companies make some of their biggest decisions based on market research. They use it to size opportunities, prioritize pipeline assets, plan launches, shape portfolio strategy, and forecast demand. The problem is that much of this research still rests on a surprisingly narrow base.
+                            </p>
+
+                            <h3 class="post-section-heading">The Limitation Is Not Just Sample Size</h3>
+                            <p>
+                                Classical market research often depends on interviews, surveys, and small quantitative samples. These methods can be valuable when the goal is to understand perception, sentiment, barriers, or stated preferences. But they become much weaker when they are asked to carry the full burden of market sizing and long-range forecasting.
+                            </p>
+                            <p>
+                                The limitation is not just sample size. It is also representativeness. A small group of physicians, patients, or experts may offer useful perspective, but they do not necessarily reflect the full structure of the market. Different regions behave differently. Treatment patterns vary by payer mix, specialty, site of care, and disease severity. Diagnostic rates are uneven. Standards of care evolve. Access friction changes real demand. Small samples struggle to capture that complexity.
+                            </p>
+
+                            <h3 class="post-section-heading">A Layered Market</h3>
+                            <p>
+                                This is especially risky in healthcare because the market is not simply a pool of potential customers. It is a layered system. There is the disease burden, the diagnosed population, the treated population, the eligible population, and the realistically reachable population. Each layer is affected by clinical practice, reimbursement, geography, and pathway dynamics. A narrow interview sample can only see a slice of that picture.
+                            </p>
+                            <blockquote class="post-quote">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                A narrow interview sample can only see a slice of the market's true structure. When small-sample research is used as the sole foundation for market sizing, companies can end up with false precision — numbers that look polished but rest on a weak foundation.
+                            </blockquote>
+
+                            <h3 class="post-section-heading">What Falls Short — and What Does Not</h3>
+                            <p>
+                                That does not make classical market research useless. It still matters. It helps organizations understand physician attitudes, unmet needs, product perceptions, and commercial barriers. But it should not be treated as the sole foundation for market opportunity estimates. When it is, companies can end up with inflated expectations, poor market prioritization, or tactics that are not grounded in actual market behavior.
+                            </p>
+
+                            <h3 class="post-section-heading">A Better Question to Ask</h3>
+                            <p>
+                                A better approach is to ask a different question: what methods are best suited for what type of decision? If the question is about perception, experience, or intent, primary research may be the right first move. But if the question is about the structure and size of the market, the base should be broader and more empirical.
+                            </p>
+                            <p>
+                                Healthcare leaders do not need to abandon traditional research. They need to put it in the right place. It should be one input into decision-making, not the entire foundation.
+                            </p>
+
+                            <div class="post-perspective">
+                                <p class="post-perspective-label"><i class="fas fa-chart-line"></i> The Symetrique Perspective</p>
+                                <p class="post-perspective-text">At Symetrique, we believe that market intelligence needs to begin with a stronger view of reality. Small samples can be useful, but they should not be mistaken for the market itself.</p>
+                            </div>
+
+                            <div class="post-attribution">
+                                <i class="fas fa-pen-nib me-2"></i>
+                                <strong>Symetrique Market Research &amp; Intelligence Team</strong>
+                            </div>
+                            <div class="post-hashtags">
+                                <span>#MarketResearch</span><span>#HealthcareAnalytics</span><span>#MarketSizing</span>
+                                <span>#PrimaryResearch</span><span>#Symetrique</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="post-divider"><span><i class="fas fa-circle-dot"></i></span></div>
+
+                    <!-- ─── POST 2 ─── -->
+                    <article class="blog-post glass-card animate-on-scroll" id="mr-post-2">
+                        <div class="post-meta-bar">
+                            <span class="post-series-badge">
+                                <i class="fas fa-layer-group me-1"></i>Market Research Intelligence — Post 2
+                            </span>
+                            <span class="post-date"><i class="far fa-calendar-alt me-1"></i>April 2026</span>
+                        </div>
+
+                        <h2 class="post-title">
+                            A Better Model for <span class="gradient-text">Market Sizing:</span> Real-World Data First, Research Second
+                        </h2>
+
+                        <div class="post-tags">
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Market Sizing</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Real-World Data</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Claims Data</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Forecasting</span>
+                        </div>
+
+                        <!-- Feature Image -->
+                        <!--<div class="post-feature-img pfi-teal">-->
+                        <!--    <div class="pfi-dec pfi-dec-1"></div>-->
+                        <!--    <div class="pfi-dec pfi-dec-2"></div>-->
+                        <!--    <div class="pfi-dec pfi-dec-3"></div>-->
+                        <!--    <div class="pfi-center">-->
+                        <!--        <div class="pfi-icon-bg"><i class="fas fa-layer-group"></i></div>-->
+                        <!--        <div class="pfi-label">Data Architecture &amp; Market Layers</div>-->
+                        <!--    </div>-->
+                        <!--    <span class="pfi-post-badge">Post 02</span>-->
+                        <!--</div>-->
+
+                        <div class="post-body">
+                            <p class="post-lead">
+                                If traditional market research is not enough on its own, what should replace it? The answer is not to eliminate research. It is to change the order of operations.
+                            </p>
+
+                            <h3 class="post-section-heading">Data First, Research Second</h3>
+                            <p>
+                                For healthcare market sizing, the strongest model begins with real-world data and then uses targeted research to interpret, refine, and validate the picture. Real-world data provides a much broader empirical window into the market. Claims can reveal treatment and utilization patterns. EHR data can add clinical context. Patient registries can deepen disease-state understanding. Public epidemiology and prevalence data can help estimate the underlying patient population. Standards-of-care literature can explain treatment pathways. When combined thoughtfully, these sources create a much more grounded starting point for estimating market opportunity.
+                            </p>
+
+                            <h3 class="post-section-heading">A Healthcare Market Is Rarely One Number</h3>
+                            <p>
+                                A healthcare market is a series of nested estimates. Real-world data helps build these layers more rigorously. It makes it possible to see how patients actually move through diagnosis, treatment, and care settings. It helps reveal where the market is broad, where it is constrained, and where the true opportunity may be smaller or larger than expected.
+                            </p>
+
+                            <div class="post-callout">
+                                <div class="post-callout-icon"><i class="fas fa-database"></i></div>
+                                <div class="post-callout-text">
+                                    <strong>The nested estimate framework:</strong> Total disease burden → diagnosed population → treated population → therapy-eligible population → realistically addressable opportunity. Each layer requires a different data source to estimate correctly.
+                                </div>
+                            </div>
+
+                            <h3 class="post-section-heading">Where Research Adds the Most Value</h3>
+                            <p>
+                                Once that empirical base is built, targeted research becomes much more valuable. Physician interviews, KOL discussions, expert panels, and qualitative research can now serve a clearer purpose. They can help explain why certain treatment patterns exist, how physician behavior may change, where emerging shifts are happening, and which assumptions need to be stress-tested.
+                            </p>
+                            <blockquote class="post-quote">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                That creates a healthier model. The market size is not built mainly from stated opinion and then stretched outward. It is built from observed market behavior and then sharpened through contextual interpretation.
+                            </blockquote>
+
+                            <h3 class="post-section-heading">Useful Across the Product Lifecycle</h3>
+                            <p>
+                                This approach is useful across several moments in the product lifecycle. Before launch, it helps estimate the true scale of opportunity. For existing products, it helps reassess whether the market assumptions still hold. For comparative strategy, it helps decision-makers see how one indication, geography, or product opportunity stacks up against another. For forecasting, it creates a stronger base for scenario modeling.
+                            </p>
+                            <p>
+                                The key is not just the data itself. It is also the discipline of combining data with context. Standards of care, treatment guidelines, local market structures, and selective primary research all matter. Real-world data is the foundation, but context is what makes the estimate useful.
+                            </p>
+
+                            <div class="post-perspective">
+                                <p class="post-perspective-label"><i class="fas fa-chart-line"></i> The Symetrique Perspective</p>
+                                <p class="post-perspective-text">At Symetrique, this is the model we believe in: start with the broadest and most empirical view of the market, then use focused research to refine the assumptions. That produces market sizing and forecasting that are not only more defensible, but also more useful for real strategic decisions.</p>
+                            </div>
+
+                            <div class="post-attribution">
+                                <i class="fas fa-pen-nib me-2"></i>
+                                <strong>Symetrique Market Research &amp; Intelligence Team</strong>
+                            </div>
+                            <div class="post-hashtags">
+                                <span>#MarketSizing</span><span>#RealWorldData</span><span>#ClaimsData</span>
+                                <span>#Forecasting</span><span>#HealthcareAnalytics</span><span>#Symetrique</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="post-divider"><span><i class="fas fa-circle-dot"></i></span></div>
+
+                    <!-- ─── POST 3 ─── -->
+                    <article class="blog-post glass-card animate-on-scroll" id="mr-post-3">
+                        <div class="post-meta-bar">
+                            <span class="post-series-badge">
+                                <i class="fas fa-project-diagram me-1"></i>Market Research Intelligence — Post 3
+                            </span>
+                            <span class="post-date"><i class="far fa-calendar-alt me-1"></i>April 2026</span>
+                        </div>
+
+                        <h2 class="post-title">
+                            Why <span class="gradient-text">Context Matters</span> More Than Ever in Healthcare Market Intelligence
+                        </h2>
+
+                        <div class="post-tags">
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Market Intelligence</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Strategic Evidence</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>Primary Research</span>
+                            <span class="post-tag"><i class="fas fa-tag me-1"></i>HTA</span>
+                        </div>
+
+                        <!-- Feature Image -->
+                        <!--<div class="post-feature-img pfi-teal">-->
+                        <!--    <div class="pfi-dec pfi-dec-1"></div>-->
+                        <!--    <div class="pfi-dec pfi-dec-2"></div>-->
+                        <!--    <div class="pfi-dec pfi-dec-3"></div>-->
+                        <!--    <div class="pfi-center">-->
+                        <!--        <div class="pfi-icon-bg"><i class="fas fa-project-diagram"></i></div>-->
+                        <!--        <div class="pfi-label">Intelligence Architecture &amp; Context</div>-->
+                        <!--    </div>-->
+                        <!--    <span class="pfi-post-badge">Post 03</span>-->
+                        <!--</div>-->
+
+                        <div class="post-body">
+                            <p class="post-lead">
+                                In healthcare market intelligence, it is surprisingly easy to lose track of context. Teams often have access to more data than ever before — yet even with all of this information, decision-makers can still end up with an incomplete or misleading view of the market. The reason is simple: data does not explain itself.
+                            </p>
+
+                            <h3 class="post-section-heading">Why Data Loses Meaning Without Context</h3>
+                            <p>
+                                Each dataset captures only part of reality. Claims may show utilization, but not always the clinical reasoning behind it. EHR may show disease and treatment details, but not broader market behavior. Public epidemiology may quantify disease burden, but not how patients move through diagnosis and care. Internal commercial data may show performance, but not whether that performance reflects true market demand, access friction, or provider behavior. When these sources are viewed separately, they can create fragmented interpretations rather than meaningful insight.
+                            </p>
+                            <p>
+                                Context is the glue that connects disparate data sources into a coherent view of the market. It explains why the numbers look the way they do. It helps teams distinguish between signal and noise. Without context, even rich datasets can produce shallow conclusions.
+                            </p>
+
+                            <h3 class="post-section-heading">Where Primary Research Adds Its Greatest Value</h3>
+                            <p>
+                                This is one of the reasons healthcare market intelligence is difficult. It is not just an exercise in collecting more data. It is an exercise in structuring the market correctly so that the data can be interpreted realistically.
+                            </p>
+                            <p>
+                                Primary research plays an important role here. Traditional market research is often positioned as the main source of market truth, but its highest value may actually be different. Its real power is in helping build the structure of context around the data.
+                            </p>
+                            <blockquote class="post-quote">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                Physician interviews, KOL discussions, patient pathway conversations, and expert interpretation can help answer questions that data alone cannot fully resolve — the contextual questions that explain why the market behaves the way it does.
+                            </blockquote>
+
+                            <h3 class="post-section-heading">Context-First, Data-Populated</h3>
+                            <p>
+                                The strongest market intelligence model is not one where interviews produce the entire estimate and data is added later as support. It is one where the context is built first through a structured understanding of the disease state, care pathways, standards of care, access conditions, and primary research — and then the data is used to quantify the market realistically within that structure.
+                            </p>
+                            <p>
+                                This leads to a much better outcome. Instead of forcing the market into a model shaped by a small sample, the organization creates a contextual framework that reflects how the market actually works. Data can then populate that framework with observed utilization, real patient movement, and grounded estimates of opportunity. The result is more realistic market sizing, better forecasting, and stronger strategic decisions.
+                            </p>
+
+                            <div class="post-callout post-callout-teal">
+                                <div class="post-callout-icon"><i class="fas fa-sitemap"></i></div>
+                                <div class="post-callout-text">
+                                    <strong>Context is not an extra layer. It is the organizing layer.</strong> Better market intelligence does not come from data alone, and it does not come from interviews alone. It comes from connecting the two through context.
+                                </div>
+                            </div>
+
+                            <div class="post-perspective">
+                                <p class="post-perspective-label"><i class="fas fa-chart-line"></i> The Symetrique Perspective</p>
+                                <p class="post-perspective-text">At Symetrique, we believe that the role of market research is evolving. Its greatest value is not just in generating isolated opinions or directional estimates. Its greater value is in helping create the structure of context that allows data to be interpreted correctly. Once that structure is in place, real-world data can do what it does best: provide a realistic view of the market.</p>
+                            </div>
+
+                            <div class="post-attribution">
+                                <i class="fas fa-pen-nib me-2"></i>
+                                <strong>Symetrique Market Research &amp; Intelligence Team</strong>
+                            </div>
+                            <div class="post-hashtags">
+                                <span>#MarketIntelligence</span><span>#StrategicEvidence</span><span>#HealthcareAnalytics</span>
+                                <span>#HTA</span><span>#PrimaryResearch</span><span>#Symetrique</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div><!-- /col-lg-8 -->
+
+                <!-- ===== SIDEBAR ===== -->
+                <div class="col-lg-4">
+                    <div class="blog-sidebar">
+
+                        <!-- Search -->
+                        <div class="sidebar-widget glass-card animate-on-scroll">
+                            <h5 class="sidebar-widget-title"><i class="fas fa-search me-2"></i>Search</h5>
+                            <div class="sidebar-search">
+                                <input type="text" id="blogSearch" class="sidebar-search-input" placeholder="Search articles…" aria-label="Search">
+                                <button class="sidebar-search-btn" id="searchBtn" aria-label="Submit search">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                            <div id="searchResults" class="search-results" aria-live="polite"></div>
+                        </div>
+
+                        <!-- Articles in this category -->
+                        <div class="sidebar-widget glass-card animate-on-scroll">
+                            <h5 class="sidebar-widget-title"><i class="fas fa-layer-group me-2"></i>In This Category</h5>
+                            <p class="sidebar-series-desc">Three articles on how to build market intelligence that supports real strategic decisions in healthcare.</p>
+                            <ul class="sidebar-series-list">
+                                <li class="series-item active">
+                                    <a href="#mr-post-1">
+                                        <span class="series-clip-num">01</span>
+                                        <span class="series-clip-title">Why Small-Sample Research Falls Short</span>
+                                        <i class="fas fa-check-circle series-check"></i>
+                                    </a>
+                                </li>
+                                <li class="series-item active">
+                                    <a href="#mr-post-2">
+                                        <span class="series-clip-num">02</span>
+                                        <span class="series-clip-title">Real-World Data First, Research Second</span>
+                                        <i class="fas fa-check-circle series-check"></i>
+                                    </a>
+                                </li>
+                                <li class="series-item active">
+                                    <a href="#mr-post-3">
+                                        <span class="series-clip-num">03</span>
+                                        <span class="series-clip-title">Why Context Is the Organizing Layer</span>
+                                        <i class="fas fa-check-circle series-check"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Topics -->
+                        <div class="sidebar-widget glass-card animate-on-scroll">
+                            <h5 class="sidebar-widget-title"><i class="fas fa-tags me-2"></i>Topics</h5>
+                            <div class="sidebar-topics">
+                                <a href="#mr-post-1" class="topic-chip">Market Sizing</a>
+                                <a href="#mr-post-1" class="topic-chip">Primary Research</a>
+                                <a href="#mr-post-2" class="topic-chip">Real-World Data</a>
+                                <a href="#mr-post-2" class="topic-chip">Claims Data</a>
+                                <a href="#mr-post-2" class="topic-chip">Forecasting</a>
+                                <a href="#mr-post-3" class="topic-chip">Market Intelligence</a>
+                                <a href="#mr-post-3" class="topic-chip">HTA</a>
+                                <a href="#mr-post-3" class="topic-chip">Strategic Evidence</a>
+                            </div>
+                        </div>
+
+                        <!-- Newsletter -->
+                        <div class="sidebar-widget glass-card sidebar-newsletter animate-on-scroll">
+                            <div class="newsletter-glow"></div>
+                            <h5 class="sidebar-widget-title"><i class="fas fa-envelope me-2"></i>Stay Updated</h5>
+                            <p class="sidebar-newsletter-desc">Get new articles on market intelligence and healthcare analytics delivered to your inbox.</p>
+                            <form class="sidebar-newsletter-form footer-newsletter">
+                                <input type="email" class="sidebar-newsletter-input" placeholder="Your email address" aria-label="Email for newsletter">
+                                <button type="submit" class="sidebar-newsletter-btn btn-primary">
+                                    <i class="fas fa-paper-plane me-2"></i>Subscribe
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- About Symetrique -->
+                        <div class="sidebar-widget glass-card animate-on-scroll">
+                            <h5 class="sidebar-widget-title"><i class="fas fa-dna me-2"></i>About Symetrique</h5>
+                            <div class="book-card">
+                                <div class="book-icon"><i class="fas fa-chart-network" style="font-size:1.2rem"></i></div>
+                                <div class="book-info">
+                                    <p class="book-title">AI-driven Real World Evidence for pharma, physicians, and patients.</p>
+                                    <p class="book-author"><a href="https://www.thesymetrique.com" target="_blank" rel="noopener" style="color:inherit">www.thesymetrique.com</a></p>
+                                    <p class="book-endorsements">Madhav Kathikar, Founder &amp; CEO · 224-566-9880</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- /blog-sidebar -->
+                </div><!-- /col-lg-4 -->
+
+            </div><!-- /row -->
+        </div><!-- /container -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 footer-col">
+                        <div class="footer-brand">
+                            <img src="assets/Footer_logo.png" alt="Symetrique Logo" class="footer-logo">
+                            <p class="footer-tagline">Decision-Grade Evidence. Delivered.</p>
+                        </div>
+                        <p class="footer-description">Transforming real-world healthcare data into actionable evidence for payers, biopharma, and healthcare decision-makers.</p>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-col">
+                        <h5 class="footer-heading">Company</h5>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="blogs.html">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6 footer-col">
+                        <h5 class="footer-heading">Stay Updated</h5>
+                        <p class="footer-newsletter-text">Get insights on RWE, market access, and healthcare analytics.</p>
+                        <form class="footer-newsletter">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                                <button class="btn btn-primary" type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6"><p class="copyright">2026 Symetrique. All rights reserved.</p></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="nav-active.js"></script>
+    <script>
+        window.addEventListener('load', function () { const p = document.getElementById('preloader'); setTimeout(() => { p.classList.add('preloader-hidden'); setTimeout(() => { p.style.display = 'none'; }, 500); }, 1500); });
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        if (navbarToggler) navbarToggler.addEventListener('click', function () { this.classList.toggle('active'); });
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const logoImg = document.querySelector('.navbar-brand img');
+        const footerLogoImg = document.querySelector('.footer-brand img.footer-logo');
+        function applyLogos(theme) { if (logoImg) logoImg.src = theme === 'light' ? 'assets/logo-placeholder_Light.png' : 'assets/logo-placeholder.png'; if (footerLogoImg) footerLogoImg.src = theme === 'light' ? 'assets/Footer_logo_Light.png' : 'assets/Footer_logo.png'; }
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) { document.documentElement.setAttribute('data-theme', currentTheme); if (currentTheme === 'light' && toggleSwitch) toggleSwitch.checked = true; applyLogos(currentTheme); } else { applyLogos(document.documentElement.getAttribute('data-theme') || 'dark'); }
+        if (toggleSwitch) { toggleSwitch.addEventListener('change', function (e) { const t = e.target.checked ? 'light' : 'dark'; document.documentElement.setAttribute('data-theme', t); localStorage.setItem('theme', t); applyLogos(t); }); }
+        window.addEventListener('scroll', function () { document.querySelector('.navbar').classList.toggle('navbar-scrolled', window.scrollY > 50); });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('animate-visible'); }); }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        // Footer + sidebar newsletter
+        (function () {
+            const endpoint = 'https://formsubmit.co/ajax/madhav.kathikar@thesymetrique.com';
+            function showMsg(form, text, ok) { let m = form.querySelector('.newsletter-msg'); if (!m) { m = document.createElement('div'); m.className = 'newsletter-msg mt-2'; form.appendChild(m); } m.textContent = text; m.style.color = ok ? 'var(--primary)' : '#ff6b6b'; }
+            document.querySelectorAll('.footer-newsletter').forEach(form => { form.addEventListener('submit', function (e) { e.preventDefault(); const input = form.querySelector('input[type="email"]'); const btn = form.querySelector('button[type="submit"]'); const email = input && input.value.trim(); if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showMsg(form, 'Please enter a valid email address.', false); return; } btn.disabled = true; btn.textContent = 'Subscribing…'; fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ email, _subject: 'Newsletter Signup' }) }).then(r => r.json()).then(() => { showMsg(form, 'Thanks — you are subscribed!', true); input.value = ''; }).catch(() => showMsg(form, 'Subscription failed. Please try again later.', false)).finally(() => { btn.disabled = false; btn.textContent = 'Subscribe'; }); }); });
+        })();
+
+        // Sidebar newsletter
+        (function () {
+            const endpoint = 'https://formsubmit.co/ajax/madhav.kathikar@thesymetrique.com';
+            const form = document.querySelector('.sidebar-newsletter-form');
+            if (!form) return;
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const input = form.querySelector('input[type="email"]');
+                const btn = form.querySelector('button[type="submit"]');
+                const email = input && input.value.trim();
+                if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showSMsg('Please enter a valid email.', false); return; }
+                btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Subscribing…';
+                fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ email, _subject: 'Blog Newsletter Signup' }) })
+                    .then(() => { showSMsg('You are subscribed!', true); input.value = ''; })
+                    .catch(() => showSMsg('Please try again later.', false))
+                    .finally(() => { btn.disabled = false; btn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Subscribe'; });
+                function showSMsg(text, ok) { let m = form.querySelector('.newsletter-msg'); if (!m) { m = document.createElement('div'); m.className = 'newsletter-msg mt-2'; form.appendChild(m); } m.textContent = text; m.style.color = ok ? '#8b5cf6' : '#ff6b6b'; }
+            });
+        })();
+
+        // Search
+        (function () {
+            const posts = [
+                { id: 'mr-post-1', title: 'Why Small-Sample Market Research Falls Short in Healthcare', tags: ['Market Research', 'Market Sizing', 'Primary Research', 'Healthcare Analytics', 'Sample Size'] },
+                { id: 'mr-post-2', title: 'A Better Model for Market Sizing: Real-World Data First, Research Second', tags: ['Market Sizing', 'Real-World Data', 'Claims Data', 'Forecasting', 'EHR', 'Epidemiology'] },
+                { id: 'mr-post-3', title: 'Why Context Matters More Than Ever in Healthcare Market Intelligence', tags: ['Market Intelligence', 'Strategic Evidence', 'Primary Research', 'HTA', 'Context', 'Healthcare Analytics'] }
+            ];
+            const input = document.getElementById('blogSearch');
+            const btn = document.getElementById('searchBtn');
+            const resultsEl = document.getElementById('searchResults');
+            function doSearch() {
+                const q = input.value.trim().toLowerCase(); resultsEl.innerHTML = ''; if (!q) return;
+                const matches = posts.filter(p => p.title.toLowerCase().includes(q) || p.tags.some(t => t.toLowerCase().includes(q)));
+                if (!matches.length) { resultsEl.innerHTML = '<p class="search-no-results">No posts found for "<em>' + q + '</em>".</p>'; return; }
+                matches.forEach(p => { const a = document.createElement('a'); a.href = '#' + p.id; a.className = 'search-result-item'; a.innerHTML = '<i class="fas fa-file-alt me-2"></i>' + p.title; a.addEventListener('click', () => { resultsEl.innerHTML = ''; input.value = ''; }); resultsEl.appendChild(a); });
+            }
+            btn.addEventListener('click', doSearch);
+            input.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+            input.addEventListener('input', doSearch);
+        })();
+    </script>
+</body>
+</html>
